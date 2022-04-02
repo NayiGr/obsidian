@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Android Studio配置gradle报错.md",
-            "mode": "preview",
+            "file": "PC连接真机测试打包失败.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Android Studio配置gradle报错.md",
+                "file": "PC连接真机测试打包失败.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "57cb4dbe4c2442ea",
   "lastOpenFiles": [
+    "PC连接真机测试打包失败.md",
     "Android Studio配置gradle报错.md",
     "README.md"
   ]

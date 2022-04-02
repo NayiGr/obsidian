@@ -1,2 +1,0 @@
-# obsidian
-123pssssss

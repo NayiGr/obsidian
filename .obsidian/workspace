@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "PC连接真机测试打包失败.md",
+            "file": "Cordova打包Android未知报错.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PC连接真机测试打包失败.md",
+                "file": "Cordova打包Android未知报错.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,8 @@
   },
   "active": "57cb4dbe4c2442ea",
   "lastOpenFiles": [
+    "Cordova打包Android未知报错.md",
+    "AgmMaps出现的'google'错误.md",
     "PC连接真机测试打包失败.md",
     "Android Studio配置gradle报错.md",
     "README.md"

@@ -1,3 +1,4 @@
+### 未知错误
 Cordova打包Android时提示报错：
 
 ```
@@ -24,3 +25,5 @@ configurations.all {
   }
 }
 ```
+
+### 权限重复

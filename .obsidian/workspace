@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cordova打包Android未知报错.md",
+            "file": "知识记录/Android打包签名.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cordova打包Android未知报错.md",
+                "file": "知识记录/Android打包签名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,10 +89,12 @@
   },
   "active": "57cb4dbe4c2442ea",
   "lastOpenFiles": [
-    "Cordova打包Android未知报错.md",
-    "AgmMaps出现的'google'错误.md",
-    "PC连接真机测试打包失败.md",
-    "Android Studio配置gradle报错.md",
+    "知识记录/Android打包签名.md",
+    "错误处理/AgmMaps出现的'google'错误.md",
+    "Cordova打包Android权限重复报错.md",
+    "错误处理/Cordova打包Android报错.md",
+    "错误处理/PC连接真机测试打包失败.md",
+    "错误处理/Android Studio配置gradle报错.md",
     "README.md"
   ]
 }

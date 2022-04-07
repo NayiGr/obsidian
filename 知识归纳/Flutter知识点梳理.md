@@ -26,8 +26,8 @@ continue：跳过当次循环
 List：
 　.add(data)：添加数据
 　.isEmpty&isNotEmpty：是否为空
-　.reversed：倒置数组，结果非[]包裹，而是()包裹着数组，
-　.toList()：转换为正常的[]包裹的数组
+　.reversed：倒置数组，结果非`[]`包裹，而是()包裹着数组，
+　.toList()：转换为正常的`[]`包裹的数组
 　.addAll => .concat()
 　.remove(data)：根据值删除数组项
 　.removeAt(index)：根据索引删除数组项

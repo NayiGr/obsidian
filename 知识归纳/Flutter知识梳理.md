@@ -1,41 +1,29 @@
-组件(类)
-　　Container => div
-　　Text => span
+##### 组件
 　　BorderRadius => style-boder-radius
 　　Radius.circular => style-boder-radius.px
 　　Matrix4 => style-transform
-　　Image => img
 　　Image.asset => img本地路径
 　　Image.network => img远程路径
 　　BoxFit => style-background-size
 　　ClipOval => 嵌套Image使用，自动使图片化为圆形
-　　ListView => ion-list (参数scrollDirection：设置横/纵向列表)
-　　ListTile => ion-item
 　　SingleChildScrollView => 防止弹出键盘压缩页面导致容器越界
 
-词语解释
-　　动态列表 => 循环显示数据列表
-　　状态管理 => 对数据进行共享、操作、更新
-　　路由管理 => 配置路由
-　　资源管理 => 配置assets
-
-
+##### 关键字
 final和const的区别：都只能赋值一次，但final不仅有const的编译时常量的特性，更重要的它是运行时的常量，是惰性初始化，即在运行时第一次使用前才初始化，如，定义当前时间，代码运行到第一次使用final的变量，此时final才进行初始化，所以时间也是代码运行到此时的时间；一般将方法赋给常量final，const无法定义
 
+##### 计算字符
 List => Array
 Map => JSON，获取值-`Map['属性']`
 is：判断类型，变量 is 类型
 ~/：取整（除后）
 ??=：左边变量如果为空，就赋值，否则不赋值
-??： eg: var a; var b = a ?? 10; 若双问号前的变量有值，则将其赋给左边变量，否则将双问号后的变量赋给左边的变量
-toString()： 数字转字符
 parse()： 字符转数字，int.parse()，double.parse()，double兼容int
-isEmpty： 判断变量是否为空
-++： eg: a++; ++a;
-	++在后，表示先将a赋给左边变量之后a再加1，++在前表示a加1后再将a赋给左边变量
+++： eg: a++; ++a;^[++在后，表示先将a赋给左边变量之后a再加1，++在前表示a加1后再将a赋给左边变量]
 break：只能向外跳出一层
 continue：跳过当次循环
 
+
+##### 语法糖
 List：
 　.add(data)：添加数据
 　.isEmpty&isNotEmpty：是否为空

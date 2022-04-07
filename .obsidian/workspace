@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "知识归纳/Flutter知识点梳理.md",
+            "file": "知识归纳/Vue知识点梳理.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识归纳/Flutter知识点梳理.md",
+                "file": "知识归纳/Vue知识点梳理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "57cb4dbe4c2442ea",
   "lastOpenFiles": [
+    "知识归纳/Vue知识点梳理.md",
+    "知识归纳/Vue响应数据原理.md",
     "知识归纳/Flutter知识点梳理.md",
-    "知识归纳/git常用命令.md",
-    "知识归纳/ES6+新增API.md",
     "知识归纳/Angular知识点梳理.md",
+    "知识归纳/DOM的重绘和重排.md",
+    "知识归纳/ES6+新增API.md",
+    "知识归纳/git常用命令.md",
     "知识归纳/Android打包签名.md",
     "知识归纳/前端笔记.md",
-    "知识归纳/JavaScript知识点记录.md",
-    "知识归纳/Virtual DOM.md",
-    "知识归纳/Vue知识点梳理.md",
-    "知识归纳/Vue响应数据原理.md"
+    "知识归纳/JavaScript知识点记录.md"
   ]
 }

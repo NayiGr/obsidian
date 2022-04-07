@@ -44,38 +44,43 @@ eg:
 　`.values()`：获取所有属性值
 　`.addAll()`：合并Map
 　`.remove(name)`：根据属性名删除数据
-　`.containsValue(value)`：查找所有属性值中是否存在value
+　`.containsValue(value)`：查找所有属性值中是否存在`value`
 
 
 ###### `List & Set & Map`
-　for in & forEach()：forEach中只有Map有key参数
-　.map() ≈> .map()，返回()包裹的数组
-　.where() => .filter()
-　.any() => .some()，js中.some()满足条件返回true，.find()满足条件返回此元素
-　.every() => .every()，全满足条件返回true，否则返回false
+　`for in & .forEach()`：`.forEach()`中只有`Map`有`key`参数
+　`.map()` ≈> `.map()`，返回()包裹的数组
+　`.where()` => `.filter()`
+　`.any()` => `.some()`，js中`.some()`满足条件返回`true`，`.find()`满足条件返回此元素
+　`.every()` => `.every()`，全满足条件返回`true`，否则返回`false`
 
 ##### 方法功能
 构造函数：
+```
 class Test {
 　　Test() {}	// 默认构造函数
 　　Test.getKey() {}		// 命名构造函数，如new Date.now()一样调用
 }
+```
 
-私有属性：
-　　_+变量，需要将类抽离成单独文件才能实现其私有的功能，否则和公有的无异
+私有属性：`_+变量`：需要将类抽离成单独文件才能实现其私有的功能，否则和公有的无异
 
 初始化列表
 　　构造函数括号后初始化类的变量(属性)
 eg:
+```
 class Test {
 　　int age;
 　　Test():age=10 {}	// 执行前初始化变量
 }
+```
 
-静态成员：
-　　static，不需要实例就可以调用
-eg：class Test{ static name } 
-　　Test.name
+静态成员：`static`，不需要实例就可以调用
+eg：
+```
+class Test{ static name } 
+Test.name
+```
 
-super()：
-　　子类继承父类时，父类构造函数需要传参，将传给子类的参数用super()，再传递给父类
+`super()`：
+　　子类继承父类时，父类构造函数需要传参，将传给子类的参数用`super()`，再传递给父类

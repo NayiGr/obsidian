@@ -1,12 +1,12 @@
 ##### 组件
-　　BorderRadius => style-boder-radius
-　　Radius.circular => style-boder-radius.px
-　　Matrix4 => style-transform
-　　Image.asset => img本地路径
-　　Image.network => img远程路径
-　　BoxFit => style-background-size
-　　ClipOval => 嵌套Image使用，自动使图片化为圆形
-　　SingleChildScrollView => 防止弹出键盘压缩页面导致容器越界
+BorderRadius => style-boder-radius
+Radius.circular => style-boder-radius.px
+Matrix4 => style-transform
+Image.asset => img本地路径
+Image.network => img远程路径
+BoxFit => style-background-size
+ClipOval => 嵌套Image使用，自动使图片化为圆形
+SingleChildScrollView => 防止弹出键盘压缩页面导致容器越界
 
 ##### 关键字
 final和const的区别：都只能赋值一次，但final不仅有const的编译时常量的特性，更重要的它是运行时的常量，是惰性初始化，即在运行时第一次使用前才初始化，如，定义当前时间，代码运行到第一次使用final的变量，此时final才进行初始化，所以时间也是代码运行到此时的时间；一般将方法赋给常量final，const无法定义
@@ -21,7 +21,6 @@ parse()： 字符转数字，int.parse()，double.parse()，double兼容int
 ++： eg: a++; ++a;^[++在后，表示先将a赋给左边变量之后a再加1，++在前表示a加1后再将a赋给左边变量]
 break：只能向外跳出一层
 continue：跳过当次循环
-
 
 ##### 语法糖
 List：
@@ -58,7 +57,7 @@ List & Set & Map
 　.any() => .some()，js中.some()满足条件返回true，.find()满足条件返回此元素
 　.every() => .every()，全满足条件返回true，否则返回false
 
-
+##### 方法功能
 构造函数：
 class Test {
 　　Test() {}	// 默认构造函数

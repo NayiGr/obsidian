@@ -1,5 +1,5 @@
 ##### Vue2响应式原理
-Vue2依靠`Object.defineProperty()`实现响应监听和数据拦截，但`Object.defineProperty()`无法捕获新增和删除数据；
+Vue2依靠`Object.defineProperty()`实现响应监听和数据拦截，但`Object.defineProperty()`无法捕获新增和删除数据，需要通过使用`Vue.set()`添加新属性，`vm.$delete()/this.$delete()`删除属性；
 ```
 let object = {
 	name: 'XXX',

@@ -8,7 +8,10 @@ store.js
 		}
 	};
 	const mutations = {    // 操作数据(state), commit('function name', value)
-	
+		[function name](state, value) {    // state是经过处理后变成响应式的state，value是传入的值
+			...
+			state.value = value;
+		}
 	};
 	const state = {};    // 储存数据
 ```

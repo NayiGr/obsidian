@@ -18,6 +18,21 @@ store.js
 	const state = {    // 储存数据
 		value: 0
 	};
+	const getters = {    // 计算属性，将state中的数据进行加工，返回值作为自身的值
+		[function name](state) {    // state是经过处理后变成响应式的state
+			...
+			return state.value * 1;
+		}
+	}
+
+	Vue.use(Vuex);    // 应用插件，必须先于创建store运行
+	
+	export default new Vuex.Store({
+		actions,
+		mutations,
+		state,
+		getters
+	});
 ```
 
 ```

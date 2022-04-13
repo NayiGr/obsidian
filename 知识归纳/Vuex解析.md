@@ -1,7 +1,7 @@
 ```
 store.js
 
-	const action = {    // 响应组件中的动作，dispatch('function name', value)
+	const action = {    // 响应组件中的动作，dispatch('function name', value)，处理业务逻辑，发送请求
 		[function name](context, value) {    // context是简化后的store，value是传入的值
 			...
 			context.commit('[function name]', value)

@@ -13,9 +13,17 @@ store.js
 			state.value = value;
 		}
 	};
-	const state = {};    // 储存数据
+	const state = {    // 储存数据
+		value: 0
+	};
 ```
 
 ```
+[Vue Component].vue
 
+	methods: {
+		handle() {
+			this.$store.dispatch('[function name]', value);
+		}
+	}
 ```

@@ -27,11 +27,11 @@ store.js
 
 	Vue.use(Vuex);    // 应用插件，必须先于创建store运行
 	
-	export default new Vuex.Store({
+	export default new Vuex.Store({    创建store
 		actions,
 		mutations,
 		state,
-		getters
+		getters    // （非必须）
 	});
 ```
 

@@ -1,4 +1,4 @@
-### 未知错误
+#### 未知错误
 
 Cordova打包Android时提示报错：
 
@@ -30,7 +30,7 @@ configurations.all {
 
 
 
-### 权限重复
+#### 权限重复
 
 报错信息：
 
@@ -50,3 +50,11 @@ configurations.all {
 解决方案：如果只是在`AndroidManifest.xml`中删除重复权限，编译打包时会重新添加重复权限；
 在 /platforms/android/ 目录下（`AndroidManifest.xml`同目录）的`android.json `里，找到`AndroidManifest.xml`属性下找到并删除重复对象，之后再在 `AndroidManifest.xml`中删除重复权限，重新编译打包。
 注：删除平台后再添加平台需重新删除
+
+#### PC连接真机测试打包失败
+执行命令行：
+- 打开设备：`adb start-server`
+- 关闭设备：`adb kill-server`
+- 查看端口：`adb nodaemon server`
+- 查看端口占用情况：`netstat -ano | findstr "5037"`
+- 删除测试机中已存在同名apk：`adb uninstall + (config.xml 中 widget 的 id)`

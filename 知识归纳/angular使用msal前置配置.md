@@ -18,3 +18,4 @@ export const AUTH_CONFIG: AuthConfig = {
    appGuid: 'xxx'
 }
 ````
+[azure-login.service.ts](obsidian://open?file=%2Fattachment%2Fazure-login.service.ts)

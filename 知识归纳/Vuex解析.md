@@ -40,8 +40,10 @@ store.js
 
 	methods: {
 		handle() {
+			this.$store.state.value;    // 获取state中的数据
 			this.$store.dispatch('[function name]', value);    // 调用store中action的方法
 			this.$store.commit('[function name]', value);    // 若无需处理业务逻辑，可直接调用store中mutations的方法
+			this.$store.gettters.[function name];    // 调用getters方法
 		}
 	}
 ```

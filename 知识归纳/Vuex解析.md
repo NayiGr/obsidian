@@ -69,7 +69,8 @@ store.js
 	computed: {
 		// 借助mapState生成计算属性，从state中读取数据
 		// 对象写法
-		...mapState({current: 'value', ...})    // current是当前.vue文件要调用的变量，value是Vuex中数据的变量名，相当于从Vuex中找到名为value的变量，将其作为方法的输出值，并将方法赋给current。
+		...mapState({current: 'value', ...})
+		// current是当前.vue文件要调用的变量，value是Vuex中数据的变量名，相当于从Vuex中找到名为value的变量，将其作为方法的输出值，并将方法赋给current。
 		// 等同于
 		current() {
 			return this.$store.state.value;
@@ -77,7 +78,8 @@ store.js
 		...
 
 		// 数组写法
-		...mapState(['value', ...])    // 当前.vue文件要调用的变量和Vuex中数据的变量是同名变量，可简写成以变量名组成的数组
+		...mapState(['value', ...])
+		// 当前.vue文件要调用的变量和Vuex中数据的变量是同名变量，可简写成以变量名组成的数组
 	}
 
 ```
@@ -91,12 +93,14 @@ store.js
 	computed: {
 		// 借助mapGetters生成计算属性，从state中读取数据
 		// 对象写法
-		...mapGetters({current: 'gettersHandle', ...})    // current是当前.vue文件要调用的变量，gettersHandle是Vuex中getters的方法名。
+		...mapGetters({current: 'gettersHandle', ...})
+		// current是当前.vue文件要调用的计算属性名，gettersHandle是Vuex中getters的计算属性名。
 
 		...
 
 		// 数组写法
-		...mapGetters(['gettersHandle', ...])    // 当前.vue文件中computed要调用的方法名和Vuex中getters的方法名相同，可简写成以方法名组成的数组
+		...mapGetters(['gettersHandle', ...])
+		// 当前.vue文件中computed要调用的计算属性名和Vuex中getters的计算属性名相同，可简写成以计算属性名组成的数组
 	}
 
 ```

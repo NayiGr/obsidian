@@ -170,5 +170,6 @@ store.js
 
 ==注意==：
 - `...mapXXX()`：解构其中的对象或数组
-- `state`和`getters`是获取变量，mapState和mapGetters是获取变量，所以放在computed中；
-	mutations、actions是执行方法，所以将mapMutations和mapActions放methods中
+- `mapState()`和`mapGetters()`是获取变量，所以放在`computed`中；
+   `mapMutations()`和`mapActions()`是执行方法，所以放在`methods`中。
+- `mapMutations()`和`mapActions()`使用时，若需要传递参数，须在模板中绑定事件时或在执行方法时传递参数，否则参数默认是事件对象(`event`)。

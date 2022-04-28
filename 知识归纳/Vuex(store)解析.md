@@ -114,6 +114,10 @@ store.js
 	methods: {
 		...mapMutations({handle: 'mutationsHandle', ...})
 		// handle是当前.vue文件要调用的方法名，mutationsHandle是Vuex中actions的方法名。
+		// 等同于/生成
+		handle(value) {
+			this.$store.commit('mutationsHandle', value);    // value没有传值，事件
+		}
 	}
 
 ```

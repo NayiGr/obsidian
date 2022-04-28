@@ -104,3 +104,5 @@ store.js
 	}
 
 ```
+
+理解：state和getters都是获取变量，所以将mapState和mapGetters放在computed中；

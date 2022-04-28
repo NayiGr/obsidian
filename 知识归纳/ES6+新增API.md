@@ -9,10 +9,10 @@
 - `Array.prototype.findIndex()`    // 找到满足参数函数条件的第一个元素的索引^[注：`.findIndex()`搜索条件自定义，`.indexOf()`搜索与条件(/值)相等]
 - `Array.prototype.copyWithin()`
 - `Array.prototype.entries()`    // 返回新的Array Iterator对象，包含数组中每个索引的键值对
-- `Array.prototype.keys()`    // 返回包含数组每个索引键的Array Iterator
-- `Array.prototype.values()`    // 返回包含数组每个值的Array Iterator
+- `Array.prototype.keys()`    // 返回包含数组每个索引键的`Array Iterator`
+- `Array.prototype.values()`    // 返回包含数组每个值的`Array Iterator`
 
-- `String.prototype.includes()`    // /.indexOf() /.search()
+- `String.prototype.includes()`    // /`.indexOf()` /`.search()`
 - `String.prototype.repeat()`    // 返回本字符串重复次数为参数的新字符串
 - `String.prototype.startsWith()`
 - `String.prototype.endsWith()`
@@ -23,7 +23,7 @@
 - `Number.isInteger()`    // 判断参数是否是安全整数/十进制整数
 - `Number.isSafeInteger()`
 - `Number.isFinite()`    // 判断参数是否有穷数
-- `Number.isNaN()`    // 判断Number类型参数是否为NaN
+- `Number.isNaN()`    // 判断Number类型参数是否为`NaN`
 
 - `Math.sign()`    // 判断参数是否是正数
 - `Math.trunc()`    // 只保留整数部分

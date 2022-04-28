@@ -3,7 +3,7 @@
 ```
 store.js
 
-	const action = {    // 响应组件中的动作，处理业务逻辑，如发送请求，dispatch('function name', value)
+	const actions = {    // 响应组件中的动作，处理业务逻辑，如发送请求，dispatch('function name', value)
 		[function name](context, value) {    // context是简化后的store，value是传入的值
 			...
 			context.commit('[function name]', value)
@@ -105,4 +105,21 @@ store.js
 
 ```
 
+##### 简化调用mutations：
+```
+[Vue Component].vue
+
+	import {mapMutations} from 'vuex';
+
+	methods: {
+		...mapMutations({handle: 'mutationsHandle', ...})
+		// handle是当前.vue文件要调用的方法名，mutationsHandle是Vuex中actions的方法名。
+	}
+
+```
+
+
+
+
 理解：state和getters都是获取变量，所以将mapState和mapGetters放在computed中；
+mutations、actions是执行方法，所以将mapMutations和mapActions放methods中

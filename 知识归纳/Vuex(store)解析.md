@@ -67,7 +67,8 @@ store.js
 	import {mapState} from 'vuex';
 
 	computed: {
-		// 借助mapState生成计算属性，从state中读取数据
+		// 借助mapState生成计算属性，从store的state中读取数据
+		
 		// 对象写法
 		...mapState({current: 'value', ...})
 		// current是当前.vue文件要调用的变量，value是Vuex中数据的变量名，相当于从Vuex中找到名为value的变量，将其作为方法的输出值，并将方法赋给current。
@@ -75,7 +76,8 @@ store.js
 		current() {
 			return this.$store.state.value;
 		}
-		...
+		
+		--- --- ---
 
 		// 数组写法
 		...mapState(['value', ...])
@@ -91,12 +93,13 @@ store.js
 	import {mapGetters} from 'vuex';
 
 	computed: {
-		// 借助mapGetters生成计算属性，从state中读取数据
+		// 借助mapGetters生成计算属性，从store的getters中读取数据
+		
 		// 对象写法
 		...mapGetters({current: 'gettersHandle', ...})
 		// current是当前.vue文件要调用的计算属性名，gettersHandle是Vuex中getters的计算属性名。
 
-		...
+		--- --- ---
 
 		// 数组写法
 		...mapGetters(['gettersHandle', ...])
@@ -112,12 +115,25 @@ store.js
 	import {mapMutations} from 'vuex';
 
 	methods: {
+	    // 借助mapMutations生成对应的方法，方法中会调用commit去联系store中的mutations
+	    
+	    // 对象写法
 		...mapMutations({handle: 'mutationsHandle', ...})
 		// handle是当前.vue文件要调用的方法名，mutationsHandle是Vuex中actions的方法名。
 		// 等同于/生成
 		handle(value) {
-			this.$store.commit('mutationsHandle', value);    // value没有传值，事件
+			this.$store.commit('mutationsHandle', value);    // 默认参数是event
+		}，
+
+		execute() {
+			this.handle(1);    // 调用执行
 		}
+
+		--- --- ---
+
+		// 数组写法
+		...mapMutations(['mutationsHandle'])
+		// 当前.vue文件中要调用执行方法的方法名和Vuex中mutations的方法名相同，可简写成以方法名组成的数组
 	}
 
 ```

@@ -10,7 +10,7 @@ store.js
 		},
 		actionHandle(context, value) {    // eg
 			...
-			context.commit('mutationsHandle', value)
+			context.commit('mutationHandle', value)
 		}
 	};
 	const mutations = {    // 操作数据(state), commit('function name', value)
@@ -18,7 +18,7 @@ store.js
 			...
 			state.value = value;
 		},
-		mutationsHandle(state, value) {    // eg
+		mutationHandle(state, value) {    // eg
 			...
 			state.value = value;
 		}
@@ -54,7 +54,7 @@ store.js
 		handle() {
 			this.$store.state.value;    // 获取state中的数据
 			this.$store.dispatch('actionHandle', value);    // 调用store中action的方法
-			this.$store.commit('mutationsHandle', value);    // 若无需处理业务逻辑，可直接调用store中mutations的方法
+			this.$store.commit('mutationHandle', value);    // 若无需处理业务逻辑，可直接调用store中mutations的方法
 			this.$store.gettters.gettersHandle;    // 调用getters方法
 		}
 	}
@@ -118,11 +118,11 @@ store.js
 	    // 借助mapMutations生成对应的方法，方法中会调用commit去联系store中的mutations
 	    
 	    // 对象写法
-		...mapMutations({handle: 'mutationsHandle', ...})
-		// handle是当前.vue文件要调用的方法名，mutationsHandle是Vuex中actions的方法名。
+		...mapMutations({handle: 'mutationHandle', ...})
+		// handle是当前.vue文件要调用的方法名，mutationHandle是Vuex中actions的方法名。
 		// 等同于/生成
 		handle(value) {
-			this.$store.commit('mutationsHandle', value);    // 默认参数是event
+			this.$store.commit('mutationHandle', value);    // 默认参数是event
 		}，
 
 		execute() {
@@ -132,14 +132,43 @@ store.js
 		--- --- ---
 
 		// 数组写法
-		...mapMutations(['mutationsHandle'])
+		...mapMutations(['mutationHandle'])
 		// 当前.vue文件中要调用执行方法的方法名和Vuex中mutations的方法名相同，可简写成以方法名组成的数组
 	}
 
 ```
 
+##### 简化调用actions：
+```
+[Vue Component].vue
 
+	import {mapActions} from 'vuex';
 
+	methods: {
+	    // 借助mapActions生成对应的方法，方法中会调用dispatch去联系store中的actions
+	    
+	    // 对象写法
+		...mapActions({handle: 'actionHandle', ...})
+		// handle是当前.vue文件要调用的方法名，actionHandle是Vuex中actions的方法名。
+		// 等同于/生成
+		handle(value) {
+			this.$store.dispatch('actionHandle', value);    // 默认参数是event
+		}，
 
-理解：state和getters都是获取变量，所以将mapState和mapGetters放在computed中；
-mutations、actions是执行方法，所以将mapMutations和mapActions放methods中
+		execute() {
+			this.handle(1);    // 调用执行
+		}
+
+		--- --- ---
+
+		// 数组写法
+		...mapActions(['actionHandle'])
+		// 当前.vue文件中要调用执行方法的方法名和Vuex中actions的方法名相同，可简写成以方法名组成的数组
+	}
+
+```
+
+==注意==：
+- `...mapXXX()`：解构其中的对象或数组
+- `state`和`getters`是获取变量，mapState和mapGetters是获取变量，所以放在computed中；
+	mutations、actions是执行方法，所以将mapMutations和mapActions放methods中

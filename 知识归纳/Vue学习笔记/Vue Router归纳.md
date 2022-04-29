@@ -1,4 +1,39 @@
 ```
+router.js
+
+	import VueRouter from 'vue-router';    Vue 2.x
+	import {createRouter,createWebHistory} from "vue-router";    // Vue 3.x
+	
+	import LoginPage from "../views/LoginPage.vue";
+
+	Vue.use(VueRouter);    // Vue规定须先use再创建路由
+
+	const routes = [    // 定义路由
+	  {
+	    path: 'login',
+	    name: 'Login',
+	    component: LoginPage
+	  }
+	];
+
+    // 创建并暴露路由器
+	export default new VueRouter({    Vue 2.x
+	  mode: 'history',
+	  base: process.env.BASE_URL,
+	  routes
+	});
+
+	export default createRouter({    // Vue 3.x
+	  history: createWebHistory(),
+	  routes
+	});
+```
+
+
+
+```
+[Vue Component].vue
+
 	<router-link active-class="active" to="/login">Login</router-link>    // 点击触发路由切换，active-class绑定触发当前路由时，展示的class样式
 	<router-view></router-view>    // 路由对应组件页面呈现的位置
 ```

@@ -58,8 +58,7 @@ LoginPage.vue
 	<router-view></router-view>    // 路由对应组件页面呈现的位置
 ```
 
-##### 路由传参
-query
+##### 路由传参和命名路由
 ```
 router.js
 
@@ -72,6 +71,7 @@ router.js
 	    component: HomePage,
 	    children: [
 		    path: 'detail',
+		    name: 'detailRouter'    // 命名路由
 		    component: Detail
 	    ]
 	  }
@@ -81,17 +81,39 @@ router.js
 ```
 
 ```
-[Vue Component].vue
-	// chuandi
-	<router-link to="/home/detail">Home</router-link>
+HomePage.vue
+	// 传递参数
+	<router-link :to="`/home/detail?id=${detail.id}&title=${detail.title}`">Home</router-link>   // query方式传参字符串写法
+	
+	<router-link :to="{
+		path: '/home/detail',
+		query: {
+			id: detail.id,
+			title: detail.title
+		}
+	}">Home</router-link>   // query方式传参对象写法
+
+<router-link :to="{
+		path: '/home/detail',
+		query: {
+			id: detail.id,
+			title: detail.title
+		}
+	}">Home</router-link>
 
 ```
 
 ```
-[Vue Component].vue
-
-	<router-link to="/home/detail">Home</router-link>
-
+Detail.vue
+	// 接收参数
+	
+	<script>
+		......
+		mounted() {
+			this.$route.query.(id/title);    // query方式接收参数
+		}
+		......
+	</script>
 ```
 
 

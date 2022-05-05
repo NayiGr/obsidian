@@ -58,6 +58,42 @@ LoginPage.vue
 	<router-view></router-view>    // 路由对应组件页面呈现的位置
 ```
 
+##### 路由传参
+query
+```
+router.js
+
+	......
+	
+	const routes = [
+	  {
+	    path: '/home',
+	    name: 'Home',
+	    component: HomePage,
+	    children: [
+		    path: 'detail',
+		    component: Detail
+	    ]
+	  }
+	];
+
+	......
+```
+
+```
+[Vue Component].vue
+	// chuandi
+	<router-link to="/home/detail">Home</router-link>
+
+```
+
+```
+[Vue Component].vue
+
+	<router-link to="/home/detail">Home</router-link>
+
+```
+
 
 一般组件^[须引入注册，在`template`中写入组件标签]置于目录`components`
 路由组件^[依靠路由规则匹配，由路由器渲染]置于目录`pages`

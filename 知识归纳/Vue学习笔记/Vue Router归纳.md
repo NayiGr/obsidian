@@ -82,7 +82,7 @@ router.js
 
 ```
 HomePage.vue
-	// 传递参数
+	// query方式传递参数
 	<router-link :to="`/home/detail?id=${detail.id}&title=${detail.title}`">Home</router-link>   // query方式传参字符串写法
 	
 	<router-link :to="{
@@ -93,13 +93,18 @@ HomePage.vue
 		}
 	}">Home</router-link>   // query方式传参对象写法
 
-<router-link :to="{
-		path: '/home/detail',
+	// 等同
+
+	<router-link :to="{
+		name: 'detailRouter',   // 替换path，省去过长路径，同时使用了命名路由就无法使用字符串写法
 		query: {
 			id: detail.id,
 			title: detail.title
 		}
 	}">Home</router-link>
+
+
+	// 
 
 ```
 

@@ -70,9 +70,14 @@ router.js
 	    name: 'Home',
 	    component: HomePage,
 	    children: [
-		    path: 'detail',
-		    name: 'detailRouter'    // 命名路由
-		    component: Detail
+		    {
+			    path: 'detail',
+			    name: 'detailRouter'    // 命名路由
+			    component: Detail
+		    },
+		    {
+		    
+		    }
 	    ]
 	  }
 	];
@@ -83,6 +88,7 @@ router.js
 ```
 HomePage.vue
 	// query方式传递参数
+	
 	<router-link :to="`/home/detail?id=${detail.id}&title=${detail.title}`">Home</router-link>   // query方式传参字符串写法
 	
 	<router-link :to="{
@@ -104,7 +110,9 @@ HomePage.vue
 	}">Home</router-link>
 
 
-	// 
+	// params方式传递参数
+
+	<router-link :to="`/home/detail/${detail.id}/${detail.title}`">Home</router-link>   // params方式传参字符串写法
 
 ```
 

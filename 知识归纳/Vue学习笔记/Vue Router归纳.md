@@ -76,7 +76,8 @@ router.js
 			    component: Detail
 		    },
 		    {
-		    
+			    path: 'detail/:id/:title',    // params传参配置
+			    component: Detail
 		    }
 	    ]
 	  }
@@ -110,7 +111,7 @@ HomePage.vue
 	}">Home</router-link>
 
 
-	// params方式传递参数
+	// params方式传递参数，需配置路由
 
 	<router-link :to="`/home/detail/${detail.id}/${detail.title}`">Home</router-link>   // params方式传参字符串写法
 

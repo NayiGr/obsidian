@@ -71,12 +71,8 @@ router.js
 	    component: HomePage,
 	    children: [
 		    {
-			    path: 'detail',
+			    path: 'detail/:id/:title',    // params传参配置占位符声明接收params参数
 			    name: 'detailRouter'    // 命名路由
-			    component: Detail
-		    },
-		    {
-			    path: 'detail/:id/:title',    // params传参配置
 			    component: Detail
 		    }
 	    ]
@@ -115,6 +111,13 @@ HomePage.vue
 
 	<router-link :to="`/home/detail/${detail.id}/${detail.title}`">Home</router-link>   // params方式传参字符串写法
 
+	<router-link :to="{
+		name: 'detailRouter',    // params方式传参只能使用命名路由
+		params: {
+			id: detail.id,
+			title: detail.title
+		}
+	}">Home</router-link>   // params方式传参对象写法
 ```
 
 ```
@@ -125,6 +128,7 @@ Detail.vue
 		......
 		mounted() {
 			this.$route.query.(id/title);    // query方式接收参数
+			this.$route.params.(id/title);    // params方式接收参数
 		}
 		......
 	</script>

@@ -181,7 +181,9 @@ Detail.vue
 
 		methods: {
 			routeGo() {
-				this.
+				// 跳转的配置与router-link的:to对象方法一致
+				this.$router.push({path: '/', query: {}});    // 跳转到对应路由
+				this.$router.replace({path: '/', query: {}});    // 跳转并替换当前路由
 			}
 		}
 

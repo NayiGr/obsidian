@@ -79,8 +79,17 @@ router.js
 				// props对象形式，该对象中键值对都会以props的形式传给接收者（如，此路由组件），但只能传递固定值，一般不会使用
 			    props: {detailId: 01, detailTitle: 'value'},
 			    
-			    // props布尔值形式，若布尔值为真，则接收的所有params参数，以props的形式传给接收者
+			    // props布尔值形式，若布尔值为真，则该路由组件接收的所有params（且只能是params）参数，以props的形式传给接收者（如，此路由组件）
 			    props: true,
+			    
+			    // props函数形式，依靠返回值传递参数
+			    props($route) {
+				    return {dId: $route.query.id, dTitle: $route.query.title}
+			    }
+			    // 连续解构赋值
+			    props({query: {id, title}}) {
+				    return {dId: id, dTitle: title}
+			    }
 		    }
 	    ]
 	  }
@@ -133,7 +142,9 @@ Detail.vue
 	
 	<script>
 		......
-		props: ['detailId', 'detailTitle']
+		props: ['detailId', 'detailTitle'],    // 路由props对象接收形式
+		props: ['id', 'title'],    // 路由props布尔值接收形式
+		props: ['dId', 'dTitle'],    // 路由props布尔值接收形式
 		mounted() {
 			// 一般方式接收参数
 			this.$route.query.(id/title);    // query方式接收参数

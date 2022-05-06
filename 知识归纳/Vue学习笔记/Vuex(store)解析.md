@@ -67,7 +67,7 @@ store.js
 	import {mapState} from 'vuex';
 
 	computed: {
-		// 借助mapState生成计算属性，从store的state中读取数据
+	// 借助mapState生成计算属性，从store的state中读取数据
 		
 		// 对象写法
 		...mapState({current: 'value', ...})
@@ -93,7 +93,7 @@ store.js
 	import {mapGetters} from 'vuex';
 
 	computed: {
-		// 借助mapGetters生成计算属性，从store的getters中读取数据
+	// 借助mapGetters生成计算属性，从store的getters中读取数据
 		
 		// 对象写法
 		...mapGetters({current: 'gettersHandle', ...})
@@ -115,7 +115,7 @@ store.js
 	import {mapMutations} from 'vuex';
 
 	methods: {
-	    // 借助mapMutations生成对应的方法，方法中会调用commit去联系store中的mutations
+	// 借助mapMutations生成对应的方法，方法中会调用commit去联系store中的mutations
 	    
 	    // 对象写法
 		...mapMutations({handle: 'mutationHandle', ...})
@@ -145,7 +145,7 @@ store.js
 	import {mapActions} from 'vuex';
 
 	methods: {
-	    // 借助mapActions生成对应的方法，方法中会调用dispatch去联系store中的actions
+	// 借助mapActions生成对应的方法，方法中会调用dispatch去联系store中的actions
 	    
 	    // 对象写法
 		...mapActions({handle: 'actionHandle', ...})

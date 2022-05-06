@@ -74,21 +74,29 @@ router.js
 			    path: 'detail/:id/:title',    // params传参配置占位符声明接收params参数
 			    name: 'detailRouter'    // 命名路由
 			    component: Detail
-			    // 接收者配置props
+
+			// 接收者配置props
 			    
 				// props对象形式，该对象中键值对都会以props的形式传给接收者（如，此路由组件），但只能传递固定值，一般不会使用
 			    props: {detailId: 01, detailTitle: 'value'},
-			    
+
+
 			    // props布尔值形式，若布尔值为真，则该路由组件接收的所有params（且只能是params）参数，以props的形式传给接收者（如，此路由组件）
 			    props: true,
-			    
+
+
 			    // props函数形式，依靠返回值传递参数
+			    // 一般方式返回值
 			    props($route) {
 				    return {dId: $route.query.id, dTitle: $route.query.title}
-			    }
-			    // 连续解构赋值
+			    },
+			    // 连续解构赋值（重命名属性值时再解构，无法获取外层属性值，如，此处query，因已被重命名）
 			    props({query: {id, title}}) {
-				    return {dId: id, dTitle: title}
+				    return {dId: id, dTitle: title};
+			    },
+			    // 直接输出query
+			    props({query}) {
+				    return {...query};
 			    }
 		    }
 	    ]
@@ -100,7 +108,8 @@ router.js
 
 ```
 HomePage.vue
-	// query方式传递参数
+
+// query方式传递参数
 	
 	<router-link :to="`/home/detail?id=${detail.id}&title=${detail.title}`">Home</router-link>   // query方式传参字符串写法
 	
@@ -123,7 +132,7 @@ HomePage.vue
 	}">Home</router-link>
 
 
-	// params方式传递参数，需配置路由
+// params方式传递参数，需配置路由
 
 	<router-link :to="`/home/detail/${detail.id}/${detail.title}`">Home</router-link>   // params方式传参字符串写法
 
@@ -142,9 +151,9 @@ Detail.vue
 	
 	<script>
 		......
-		props: ['detailId', 'detailTitle'],    // 路由props对象接收形式
-		props: ['id', 'title'],    // 路由props布尔值接收形式
-		props: ['dId', 'dTitle'],    // 路由props布尔值接收形式
+		props: ['detailId', 'detailTitle'],    // 路由props对象接收形式时对应属性
+		props: ['id', 'title'],    // 路由props布尔值接收形式时对应属性
+		props: ['dId', 'dTitle'],    // 路由props布尔值接收形式时对应属性
 		mounted() {
 			// 一般方式接收参数
 			this.$route.query.(id/title);    // query方式接收参数

@@ -74,6 +74,13 @@ router.js
 			    path: 'detail/:id/:title',    // params传参配置占位符声明接收params参数
 			    name: 'detailRouter'    // 命名路由
 			    component: Detail
+			    // 接收者配置props
+			    
+				// props对象形式，该对象中键值对都会以props的形式传给接收者（如，此路由组件），但只能传递固定值，一般不会使用
+			    props: {detailId: 01, detailTitle: 'value'},
+			    
+			    // props布尔值形式，若布尔值为真，则接收的所有params参数，以props的形式传给接收者
+			    props: true,
 		    }
 	    ]
 	  }
@@ -126,7 +133,9 @@ Detail.vue
 	
 	<script>
 		......
+		props: ['detailId', 'detailTitle']
 		mounted() {
+			// 一般方式接收参数
 			this.$route.query.(id/title);    // query方式接收参数
 			this.$route.params.(id/title);    // params方式接收参数
 		}

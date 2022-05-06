@@ -184,6 +184,11 @@ Detail.vue
 				// 跳转的配置与router-link的:to对象方法一致
 				this.$router.push({path: '/', query: {}});    // 跳转到对应路由
 				this.$router.replace({path: '/', query: {}});    // 跳转并替换当前路由
+				this.$router.back();    // 后退
+				this.$router.forward();    // 前进
+				this.$router.go([num]);    // 需传入数字，前进正数次，后退负数次
+				this.$router.go(3);    // 前进三次
+				this.$router.go(-4);    // 后退四次
 			}
 		}
 

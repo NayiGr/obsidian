@@ -1,4 +1,5 @@
 ##### 一级路由和多级路由使用
+
 ```
 router.js
 
@@ -59,6 +60,7 @@ LoginPage.vue
 ```
 
 ##### 路由传参和命名路由
+
 ```
 router.js
 
@@ -163,6 +165,29 @@ Detail.vue
 	</script>
 ```
 
+```
+[Vue Component].vue
+
+	<router-link replace active-class="active" to="/login">Login</router-link>    // replace替换当前记录的路由
+```
+
+##### 编程式路由导航
+
+```
+[Vue Component].vue
+
+	<script>
+		......
+
+		methods: {
+			routeGo() {
+				this.
+			}
+		}
+
+		......
+	</script>
+```
 
 一般组件^[须引入注册，在`template`中写入组件标签]置于目录`components`
 路由组件^[依靠路由规则匹配，由路由器渲染]置于目录`pages`

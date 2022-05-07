@@ -1,5 +1,4 @@
 ##### 一级路由和多级路由使用
-
 ```
 router.js
 
@@ -60,7 +59,6 @@ LoginPage.vue
 ```
 
 ##### 路由传参和命名路由
-
 ```
 router.js
 
@@ -172,7 +170,6 @@ Detail.vue
 ```
 
 ##### 编程式路由导航
-
 ```
 [Vue Component].vue
 
@@ -223,6 +220,22 @@ Detail.vue
 		}
 	</script>
 ```
+
+#### 路由组件中两个新生命周期
+```
+[Vue Component].vue
+
+	<script>
+		export default {
+			name: '(Component Name)',
+			activated() {    // 路由激活时触发（切换到当前路由组件时，无关是否缓存）
+			},
+			deactivated() {    // 路由失活时触发（切换到其他路由组件时，无关是否缓存）
+			}
+		}
+	</script>
+```
+ 注意：`activated()`和`deactivated()`只有在`<keep-alive></keep-alive>`包裹的时候才有效；
 
 一般组件^[须引入注册，在`template`中写入组件标签]置于目录`components`
 路由组件^[依靠路由规则匹配，由路由器渲染]置于目录`pages`

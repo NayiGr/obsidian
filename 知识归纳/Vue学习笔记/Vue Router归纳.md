@@ -1,3 +1,6 @@
+一般组件^[须引入注册，在`template`中写入组件标签]置于目录`components`
+路由组件^[依靠路由规则匹配，由路由器渲染]置于目录`pages`
+
 ##### 一级路由和多级路由使用
 ```
 router.js
@@ -244,6 +247,48 @@ Detail.vue
  注意：`activated()`和`deactivated()`只有在`<keep-alive></keep-alive>`包裹的时候才有效；
 
 ##### 路由守卫
+```
+router.js
 
-一般组件^[须引入注册，在`template`中写入组件标签]置于目录`components`
-路由组件^[依靠路由规则匹配，由路由器渲染]置于目录`pages`
+	import VueRouter from 'vue-router';
+	
+	import LoginPage from "../views/LoginPage.vue";
+	import LoginPage from "../views/User.vue";
+	import LoginPage from "../views/Setting.vue";
+
+	Vue.use(VueRouter);
+
+	const routes = [
+	  {
+	    path: '/login',
+	    name: 'Login',
+	    component: LoginPage,
+	    children: [
+		    {
+			    path: 'user',
+			    component: 'User'
+		    },
+		    {
+			    path: 'setting',
+			    component: 'Setting'
+		    }
+	    ]
+	  }
+	];
+
+	const router = new VueRouter({
+	  mode: 'history',
+	  base: process.env.BASE_URL,
+	  routes
+	});
+
+// 全局前置路由守卫
+
+	// 初始化和每次路由切换前调用指定的回调函数
+	router.beforeEach((to, from, next) => {    // to: 目标路由，from: 当前路由，next: 继续执行（如不执行则无法进行路由跳转）
+		next();
+	});
+
+	export default router;
+
+```

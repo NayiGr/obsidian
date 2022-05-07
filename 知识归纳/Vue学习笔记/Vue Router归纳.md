@@ -269,7 +269,7 @@ router.js
 			    component: 'User',
 			    meta: {isGo: false},    //路由元信息，配置自定义内容，可用于在路由守卫中进行权限校验
 			    beforeEnter: (to, from, next) {    // 独享路由守卫，只有前置没有后置
-				    // to: 目标路由(进入此路由)，from: 发起路由，next: 继续执行（如不执行则无法进行路由跳转）
+				    // to: 目标路由(此路由)，from: 发起路由，next: 继续执行（如不执行则无法进行路由跳转）
 			    }
 		    },
 		    {
@@ -302,3 +302,25 @@ router.js
 	export default router;
 
 ```
+
+**组件内路由守卫**
+```
+[Vue Component].vue
+
+	<script>
+		export default {
+			name: '(Component Name)',
+			// 进入时守卫，通过路由规则，进入该组件时被调用，同独享路由守卫
+			beforeRouteEnter(to, from, next) {
+			},
+			
+			// 离开时守卫，通过路由规则，离开该组件时被调用，不同于后置路由守卫
+			beforeRouteLeave(to, from, next) {
+				// to: 目标路由，from: 发起路由（此路由），next: 继续执行（如不执行则无法进行路由跳转）
+			}
+		}
+	</script>
+
+```
+
+注：全局路由守卫可与其他类型路由守卫配合使用。

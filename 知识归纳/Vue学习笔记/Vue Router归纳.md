@@ -221,7 +221,7 @@ Detail.vue
 	</script>
 ```
 
-#### 路由组件中两个新生命周期
+##### 路由组件中两(+1)个新生命周期钩子
 ```
 [Vue Component].vue
 
@@ -231,11 +231,19 @@ Detail.vue
 			activated() {    // 路由激活时触发（切换到当前路由组件时，无关是否缓存）
 			},
 			deactivated() {    // 路由失活时触发（切换到其他路由组件时，无关是否缓存）
+			},
+			methods: {
+				methodHandle() {
+					......    // DOM会在触发方法后，方法中的代码执行完毕，改变数据后才更新DOM，
+					this.$nextTick(function() {});    // nextTick指定的回调函数会在更新后的新DOM节点再执行（类似延时器）
+				}
 			}
 		}
 	</script>
 ```
  注意：`activated()`和`deactivated()`只有在`<keep-alive></keep-alive>`包裹的时候才有效；
+
+##### 路由守卫
 
 一般组件^[须引入注册，在`template`中写入组件标签]置于目录`components`
 路由组件^[依靠路由规则匹配，由路由器渲染]置于目录`pages`

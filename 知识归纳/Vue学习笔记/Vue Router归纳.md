@@ -246,7 +246,7 @@ Detail.vue
 ```
  注意：`activated()`和`deactivated()`只有在`<keep-alive></keep-alive>`包裹的时候才有效；
 
-##### 路由守卫
+##### 路由守卫：对路由进行权限控制
 ```
 router.js
 
@@ -266,8 +266,11 @@ router.js
 	    children: [
 		    {
 			    path: 'user',
-			    component: 'User'
-			    meta: {isGo: false}//路由元信息，配置自定义内容，可用于在路由守卫中进行权限校验
+			    component: 'User',
+			    meta: {isGo: false},    //路由元信息，配置自定义内容，可用于在路由守卫中进行权限校验
+			    beforeEnter: (to, from, next) {    // 独享路由守卫，只有前置没有后置
+				    // to: 目标路由(进入此路由)，from: 发起路由，next: 继续执行（如不执行则无法进行路由跳转）
+			    }
 		    },
 		    {
 			    path: 'setting',
@@ -284,11 +287,16 @@ router.js
 	  routes
 	});
 
-// 全局前置路由守卫
+	// 全局前置路由守卫，初始化和每次路由切换前调用指定的回调函数
+	router.beforeEach((to, from, next) => {    // to: 目标路由，from: 发起路由，next: 继续执行（如不执行则无法进行路由跳转）
+		if (to.meta.isGo) {
+			next();
+		}
+	});
 
-	// 初始化和每次路由切换前调用指定的回调函数
-	router.beforeEach((to, from, next) => {    // to: 目标路由，from: 当前路由，next: 继续执行（如不执行则无法进行路由跳转）
-		next();
+	// 全局后置路由守卫，初始化和每次路由切换后调用指定的回调函数
+	router.afterEach((to, from) => {    // to: 目标路由，from: 发起路由
+		document.title = '(页面自定义)';    // 真正进入页面后才需修改的数据，如页面标题
 	});
 
 	export default router;

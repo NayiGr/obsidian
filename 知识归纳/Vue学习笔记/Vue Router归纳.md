@@ -196,5 +196,22 @@ Detail.vue
 	</script>
 ```
 
+##### 缓存路由组件
+```
+[Vue Component].vue
+
+	// 一般情况下切换路由会销毁当前路由组件，其中的数据会被清空
+	<router-view></router-view>
+
+	// 将路由展示区置于<keep-alive>中，缓存其中的展示区即路由组件
+	<keep-alive>
+		<router-view></router-view>
+	</keep-alive>
+
+	<keep-alive include="">
+		<router-view></router-view>
+	</keep-alive>
+```
+
 一般组件^[须引入注册，在`template`中写入组件标签]置于目录`components`
 路由组件^[依靠路由规则匹配，由路由器渲染]置于目录`pages`

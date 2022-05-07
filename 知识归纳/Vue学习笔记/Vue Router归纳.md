@@ -208,9 +208,20 @@ Detail.vue
 		<router-view></router-view>
 	</keep-alive>
 
-	<keep-alive include="">
+	// include指定需要缓存的路由组件的组件名，除此之外的路由组件不进行缓存
+	<keep-alive include="(Component Name)">
 		<router-view></router-view>
 	</keep-alive>
+	<keep-alive :include="['(Component Name)', ...]">    // 数组形式
+		<router-view></router-view>
+	</keep-alive>
+
+
+	<script>
+		export default {
+			name: '(Component Name)'
+		}
+	</script>
 ```
 
 一般组件^[须引入注册，在`template`中写入组件标签]置于目录`components`

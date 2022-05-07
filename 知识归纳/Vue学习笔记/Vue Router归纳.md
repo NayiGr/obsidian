@@ -267,10 +267,12 @@ router.js
 		    {
 			    path: 'user',
 			    component: 'User'
+			    meta: {isGo: false}//路由元信息，配置自定义内容，可用于在路由守卫中进行权限校验
 		    },
 		    {
 			    path: 'setting',
-			    component: 'Setting'
+			    component: 'Setting',
+			    meta: {isGo: true}
 		    }
 	    ]
 	  }

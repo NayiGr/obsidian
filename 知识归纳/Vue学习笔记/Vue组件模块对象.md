@@ -9,9 +9,12 @@
 	......
 	computed: {
 		[computedHandle]: {
-			get() {},    // 当初次读取[computedHandle]时调用，和所依赖的数据发送变化时调用，且返回值作为[computedHandle]的属性值
+			get() {},    // 返回值作为[computedHandle]的属性值，初次读取时和所依赖的数据发生变化时调用该方法，除此之外，读取的都是缓存中的[computedHandle]的值
 			set() {},
 		}
 	}
 	......
 ```
+
+==注==：
+- `computed`和`methods`的区别：`computed`读取时能够缓存调用方法的值（返回值），再之后所依赖的数据不变时，直接读取缓存的值，`methods`则没有缓存值，每次读取时都要调用`methods`中的对应的方法。

@@ -28,6 +28,8 @@ return {
 };
 ```
 
+---
+
 ##### Vue事件修饰符
 `@click.xxx="handle()"`
 `@click.xxx.xxx="handle()"` ^[多个可链式书写]

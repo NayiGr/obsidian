@@ -61,6 +61,8 @@ LoginPage.vue
 	<router-view></router-view>    // 路由对应组件页面呈现的位置
 ```
 
+---
+
 ##### 路由传参和命名路由
 ```
 router.js
@@ -172,6 +174,8 @@ Detail.vue
 	<router-link replace active-class="active" to="/login">Login</router-link>    // replace替换当前记录的路由
 ```
 
+---
+
 ##### 编程式路由导航
 ```
 [Vue Component].vue
@@ -195,6 +199,8 @@ Detail.vue
 		......
 	</script>
 ```
+
+---
 
 ##### 缓存路由组件
 ```
@@ -224,6 +230,8 @@ Detail.vue
 	</script>
 ```
 
+---
+
 ##### 路由组件中两(+1)个新生命周期钩子
 ```
 [Vue Component].vue
@@ -245,6 +253,8 @@ Detail.vue
 	</script>
 ```
  注意：`activated()`和`deactivated()`只有在`<keep-alive></keep-alive>`包裹的时候才有效；
+
+---
 
 ##### 路由守卫：对路由进行权限控制
 ```
@@ -324,6 +334,8 @@ router.js
 ```
 
 注：全局路由守卫可与其他类型路由守卫配合使用。
+
+---
 
 ##### 路由工作模式
 hash工作模式：`https://localhost/#/...`哈希/`hash`(`#`)后的路径不会作为整体的一部分发送给服务器，兼容性好；

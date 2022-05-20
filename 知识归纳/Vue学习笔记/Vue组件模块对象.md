@@ -37,7 +37,10 @@
 
 	......
 	data: {
-		
+		value: true,
+	}
+	watch: {
+		value
 	}
 	......
 ```

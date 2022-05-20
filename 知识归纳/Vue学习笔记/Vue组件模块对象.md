@@ -9,7 +9,7 @@
 	......
 	computed: {
 		[computedHandle]: {
-			get() {},    // 读取[computedHandle]时调用，且返回值作为[computedHandle]的属性值
+			get() {},    // 当初次读取[computedHandle]时调用，和所依赖的数据发送变化时调用，且返回值作为[computedHandle]的属性值
 			set() {},
 		}
 	}

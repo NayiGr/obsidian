@@ -3,6 +3,11 @@
 
 ---
 
+##### methods
+
+
+---
+
 ##### computed
 计算属性：将原有的属性（`data`中的数据），进行加工计算所生成的新属性。
 ```
@@ -107,21 +112,21 @@
 	},
 	computed: {
 		[result_value]() {
-			return [value_1] + [value_2];
+			return this.[value_1] + this.[value_2];
 		}
 	},
 	watch: {
 		[value_1](val) {
-			[result_value] = val + [value_2];
+			this.[result_value] = val + this.[value_2];
 		},
 		[value_2](val) {
-			[result_value] = [value_1] + val;
+			this.[result_value] = this.[value_1] + val;
 		},
 	}
 	......
 ```
 
-但当需要进行异步任务时，只能使用`watch`。
+但当需要进行异步操作时，只能使用`watch`，而`computed`计算属性无法开启异步任务。
 ```
 [Vue Component].vue
 
@@ -133,18 +138,25 @@
 	},
 	computed: {
 		[result_value]() {
-			return [value_1] + [value_2];
+			return this.[value_1] + this.[value_2];
 		}
 	},
 	watch: {
 		[value_1](val) {
-			setTimeout(() => {
-				[result_value] = val + [value_2];
+			setTimeout(() => {    // setTimeout中回调若使用普通函数则this指向Window，而使用箭头函数让其没有了自己的this，变为使用父级的this
+				this.[result_value] = val + this.[value_2];
 			})
 		},
 		[value_2](val) {
-			[result_value] = [value_1] + val;
+			this.[result_value] = this.[value_1] + val;
 		},
 	}
 	......
 ```
+
+1. `computed`能完成的功能，`watch`都能完成；
+2. `watch`能完成的共功能，`computed`不一定能完成。
+
+==注==：
+- 所有被`Vue`管理的函数，都写为普通函数，如此`this`的指向才是`vm`或组件实例对象；
+- 所有不被`Vue`管理的函数（定时器的回调函数，`Ajax`的回调函数，`Promise`的回调函数），都写成箭头函数，如此`this`的指向才是`vm`或组件实例对象。

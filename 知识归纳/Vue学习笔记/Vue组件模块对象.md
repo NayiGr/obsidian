@@ -68,10 +68,7 @@
 	});
 
 	// 简写（不需要其他配置项）
-	vm.$watch('[data value]', {    // 或在methods中的方法中调用this.$watch()[?未尝试]
-		immediate: true,
-		handler(newValue, oldValue) {}
-	});
+	vm.$watch('[data value]', function (newValue, oldValue) {});
 ```
 **深度监视**
 ```

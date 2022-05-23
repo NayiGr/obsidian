@@ -93,3 +93,30 @@
 	}
 	......
 ```
+
+##### watch和computed区别
+一般对于新变量依赖已有变量，随已有变量改变而改变情况下使用，watch和computed
+```
+[Vue Component].vue
+
+	......
+	data: {
+		[value_1]: 1,
+		[value_2]: 2,
+		[result_value]: 0,    // watch中使用
+	},
+	computed: {
+		[result_value]() {
+			return [value_1] + [value_2];
+		}
+	},
+	watch: {
+		[value_1](val) {
+			[result_value] = val + [value_2];
+		},
+		[value_2](val) {
+			[result_value] = [value_1] + val;
+		},
+	}
+	......
+```

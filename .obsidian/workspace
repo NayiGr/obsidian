@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "3ce29d15895b9e20",
+        "id": "ac03222b2e5b7a71",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "知识归纳/Vue学习笔记/Vue组件模块对象.md",
+            "file": "知识归纳/Vue学习笔记/Vue列表渲染.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识归纳/Vue学习笔记/Vue组件模块对象.md",
+                "file": "知识归纳/Vue学习笔记/Vue列表渲染.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3ce29d15895b9e20",
+  "active": "ac03222b2e5b7a71",
   "lastOpenFiles": [
+    "知识归纳/Vue学习笔记/Vue列表渲染.md",
     "知识归纳/Vue学习笔记/Vue组件模块对象.md",
     "知识归纳/Vue学习笔记/Vue知识点梳理.md",
     "知识归纳/Vue学习笔记/Vuex(store)解析.md",
+    "知识归纳/Vue学习笔记/Vue Router归纳.md",
     "知识归纳/Vue学习笔记/Vue响应数据原理.md",
     "知识归纳/Vue学习笔记/Vue的MVVM模型.md",
-    "知识归纳/Vue学习笔记/Vue Router归纳.md",
     "知识归纳/Virtual DOM.md",
     "知识归纳/DOM的重绘和重排.md",
-    "知识归纳/前端笔记.md",
-    "知识归纳/Angular知识点梳理.md"
+    "知识归纳/前端笔记.md"
   ]
 }

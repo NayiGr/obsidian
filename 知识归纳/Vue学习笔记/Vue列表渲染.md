@@ -1,3 +1,4 @@
+##### 各种数据类型的遍历渲染
 ```
 [Vue Component].vue
 	......
@@ -40,6 +41,33 @@
 			code: 'obj_code_1'
 		},
 		string: 'string_title'
+	}
+
+	......
+```
+
+---
+
+##### key的原理
+```
+[Vue Component].vue
+	......
+
+	<ul>
+		<li v-for="(item, index) in list" :key="item.id">{{item.title}}</li>
+	</ul>
+
+	......
+
+
+	......
+
+	data: {
+		list: [
+			{id: 1, title: 'title_1'},
+			{id: 2, title: 'title_2'},
+			{id: 3, title: 'title_3'},
+		]
 	}
 
 	......

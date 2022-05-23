@@ -44,22 +44,34 @@
 	}
 	// 方法一
 	watch: {
+		// 正常写法
 		[data value]: {
 			immediate: true,    // 非必须，初始化时调用handler()
 			handler(newValue, oldValue) {}    // 当[data value]发生改变时调用
 		},
 		[computedHandle]: {    // 也可监听计算属性
 			handler(newValue, oldValue) {}
-		}
+		}，
+
+		// 简写（不需要其他配置项）
+		[data value](newValue, oldValue) {}    // 同[data value]: {handler(newValue, oldValue) {}}
 	}
 	......
 
 	// 方法二
 	const vm = new Vue({});
+	
+	// 正常写法
 	vm.$watch('[data value]', {    // 或在methods中的方法中调用this.$watch()[?未尝试]
 		immediate: true,
 		handler(newValue, oldValue) {}
-	})
+	});
+
+	// 简写（不需要其他配置项）
+	vm.$watch('[data value]', {    // 或在methods中的方法中调用this.$watch()[?未尝试]
+		immediate: true,
+		handler(newValue, oldValue) {}
+	});
 ```
 **深度监视**
 ```

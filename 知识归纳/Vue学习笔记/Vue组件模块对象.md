@@ -37,10 +37,19 @@
 
 	......
 	data: {
-		value: true,
+		[data value]: true,
+	}，
+	computed: {
+		[computedHandle]() {}
 	}
 	watch: {
-		value
+		[data value]: {
+			immediate: true,    // 非必须，初始化时调用handler()
+			handler(newValue, oldValue) {}    // 当[data value]发生改变时调用
+		},
+		[computedHandle]: {    // 也可监听计算属性
+			handler(newValue, oldValue) {}
+		}
 	}
 	......
 ```

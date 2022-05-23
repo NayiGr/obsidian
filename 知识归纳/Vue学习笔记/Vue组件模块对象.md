@@ -38,10 +38,11 @@
 	......
 	data: {
 		[data value]: true,
-	}，
+	},
 	computed: {
 		[computedHandle]() {}
 	}
+	// 方法一
 	watch: {
 		[data value]: {
 			immediate: true,    // 非必须，初始化时调用handler()
@@ -50,6 +51,36 @@
 		[computedHandle]: {    // 也可监听计算属性
 			handler(newValue, oldValue) {}
 		}
+	}
+	......
+
+	// 方法二
+	const vm = new Vue({});
+	vm.$watch('[data value]', {    // 或在methods中的方法中调用this.$watch()[?未尝试]
+		immediate: true,
+		handler(newValue, oldValue) {}
+	})
+```
+**深度监视**
+```
+[Vue Component].vue
+
+	......
+	data: {
+		obj: {
+			value: 0
+		},
+	}
+	watch: {
+		'obj.value': {    // 监视多级结构中单个属性的变化
+			immediate: true,
+			handler(newValue, oldValue) {}
+		},
+		obj: {
+			deep: true,    // 监视多级结构中所有属性的变化，当obj中有属性变化就会触发
+			handler(newValue, oldValue) {}
+		}
+		
 	}
 	......
 ```

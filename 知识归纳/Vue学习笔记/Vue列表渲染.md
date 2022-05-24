@@ -49,6 +49,9 @@
 ---
 
 ##### key的原理
+虚拟`DOM`的`diff`(对比)算法
+
+
 ```
 [Vue Component].vue
 	......

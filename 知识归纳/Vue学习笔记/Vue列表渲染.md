@@ -54,7 +54,10 @@
 	......
 
 	<ul>
-		<li v-for="(item, index) in list" :key="item.id">{{item.title}}</li>
+		<li v-for="(item, index) in list" :key="item.id">
+			{{item.title}}
+			<input type='text' />
+		</li>
 	</ul>
 
 	......

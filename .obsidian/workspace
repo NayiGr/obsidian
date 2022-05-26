@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "知识归纳/Flutter打包签名.md",
+            "file": "知识归纳/Vue学习笔记/Vue响应数据原理.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识归纳/Flutter打包签名.md",
+                "file": "知识归纳/Vue学习笔记/Vue响应数据原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "6b361acd8b135f4e",
   "lastOpenFiles": [
+    "知识归纳/Vue学习笔记/Vue响应数据原理.md",
+    "知识归纳/Vue学习笔记/Vue组件模块对象.md",
     "知识归纳/Flutter打包签名.md",
     "知识归纳/Android打包签名.md",
     "知识归纳/Flutter知识点梳理.md",
     "错误处理/Flutter编译错误.md",
     "知识归纳/Vue学习笔记/Vue列表渲染.md",
-    "知识归纳/Vue学习笔记/Vue组件模块对象.md",
     "知识归纳/Vue学习笔记/Vue知识点梳理.md",
     "知识归纳/Vue学习笔记/Vuex(store)解析.md",
-    "知识归纳/Vue学习笔记/Vue Router归纳.md",
-    "知识归纳/Vue学习笔记/Vue响应数据原理.md"
+    "知识归纳/Vue学习笔记/Vue Router归纳.md"
   ]
 }

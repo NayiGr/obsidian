@@ -44,4 +44,4 @@ const proxy = new Proxy(object, {    // 单个Proxy可满足一维对象进行�
 ```
 
 ##### Vue检测对象数据改变
-使用Observer监视data中属性的变化，
+使用Observer监视data中属性的变化，Observer中对对象的keys进行遍历并使用`Object.defineProperty()`

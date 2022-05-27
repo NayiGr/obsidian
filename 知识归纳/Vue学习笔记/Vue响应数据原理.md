@@ -48,7 +48,7 @@ const proxy = new Proxy(object, {    // 单个Proxy可满足一维对象进行�
 
 简化功能：
 ```
-	let data = {value: 0};
+	let data = {value: 0, objects: {proper: ''}};
 
 	const _data = new Data(data);
 	vm._data = data = _data;
@@ -62,7 +62,10 @@ const proxy = new Proxy(object, {    // 单个Proxy可满足一维对象进行�
 				set(val) {
 					obj[key] = val;
 				}
-			})
+			});
+			// 当存在对象子级也是对象时，进行递归遍历
 		})
 	}
+	
+	vm.$setobjects
 ```

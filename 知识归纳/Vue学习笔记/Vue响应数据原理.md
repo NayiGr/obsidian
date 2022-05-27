@@ -43,10 +43,12 @@ const proxy = new Proxy(object, {    // 单个Proxy可满足一维对象进行�
 });
 ```
 
+---
+
 ##### Vue检测对象数据改变
 对对象的keys进行遍历并使用`Object.defineProperty()`，监视data中属性的变化。
 
-简化功能：
+仿Vue实现响应式检测对象的简化功能：
 ```
 	let data = {value: 0, objects: {proper: ''}};
 
@@ -67,5 +69,17 @@ const proxy = new Proxy(object, {    // 单个Proxy可满足一维对象进行�
 		})
 	}
 	
-	vm.$setobjects
 ```
+
+响应式对象添加属性，并使新属性同样时响应式：`vm.$set(vm.objects, 'proper', 'P')`，但对象不能是`Vue`实例，或是Vue实例的根数据对象(`data`)。
+
+---
+
+##### Vue检测数组数据改变
+数组元素不是用`Object.defineProperty()`实现监视数据变化，
+
+最后一位新增元素push
+删除最后一位元素pop
+删除第一位元素shift
+第一位元素前新增元素unshift
+zhi'ding

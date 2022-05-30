@@ -77,9 +77,13 @@ const proxy = new Proxy(object, {    // 单个Proxy可满足一维对象进行�
 
 ##### Vue检测数组数据改变
 数组元素不是用`Object.defineProperty()`实现监视数据变化，
+Vue对数组方法
 
 最后一位新增元素push
 删除最后一位元素pop
 删除第一位元素shift
 第一位元素前新增元素unshift
-zhi'ding
+指定位置插入/删除/替换元素splice
+排序数组sort
+反转数组reverse
+

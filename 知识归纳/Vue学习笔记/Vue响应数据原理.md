@@ -71,19 +71,22 @@ const proxy = new Proxy(object, {    // 单个Proxy可满足一维对象进行�
 	
 ```
 
-响应式对象添加属性，并使新属性同样时响应式：`vm.$set(vm.objects, 'proper', 'P')`，但对象不能是`Vue`实例，或是Vue实例的根数据对象(`data`)。
+响应式对象添加属性，并使新属性同样时响应式：`vm.$set(vm.objects, 'proper', 'P')`/`Vue.set(vm.objects, 'proper', 'P');`，但对象不能是`Vue`实例，或是Vue实例的根数据对象(`data`)。
 
 ---
 
 ##### Vue检测数组数据改变
-数组元素不是用`Object.defineProperty()`实现监视数据变化，
-Vue对数组方法
+数组元素无法用`Object.defineProperty()`实现监视数据变化，Vue对原型对象的数组的变更方法进行了包装，实现管理监听。
 
-最后一位新增元素push
-删除最后一位元素pop
-删除第一位元素shift
-第一位元素前新增元素unshift
-指定位置插入/删除/替换元素splice
-排序数组sort
-反转数组reverse
+第一种，数组变更方法（改变原始数组）：
+- `push()`：最后一位新增元素push
+- `pop()`：删除最后一位元素
+- `shift()`：删除第一位元素
+- `unshift()`：第一位元素前新增元素
+- `splice()`：指定位置插入/删除/替换元素
+- `sort()`：排序数组
+- `reverse()`：反转数组
 
+第二种，`$set()`：
+`this.$set(vm.arrary, [index], [value]);`
+`Vue.set(vm.arrary, [index], [value]);`

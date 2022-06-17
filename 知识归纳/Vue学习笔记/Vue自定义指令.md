@@ -13,9 +13,14 @@
 				}
 			}
 			directives: {
-				// 简写，不依靠返回值触发修改，依靠修改DOM元素改变
+				// 简写，不依靠返回值触发修改，依靠操作DOM元素改变
 				['directive name'](element, binding){    // 第一个参数是指令绑定的DOM元素，第二个参数是当前指令的绑定对象
 					element.innerText = binding.value * 10;    // binding.value指所绑定的值
+				},
+				
+				// 完整
+				['directive name']: {
+				
 				}
 			}
 		}

@@ -1,5 +1,5 @@
 ##### 局部过滤器
-```
+```html
 [Vue Component].vue
 
 	<span>{{time | dateFormat(toUTCString) | stringSlice}}</span>    // 过滤器按从左到右将结果依次执行

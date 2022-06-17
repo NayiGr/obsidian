@@ -2,7 +2,7 @@
 路由组件^[依靠路由规则匹配，由路由器渲染]置于目录`pages`
 
 ##### 一级路由和多级路由使用
-```
+```js
 router.js
 
 	import VueRouter from 'vue-router';    Vue 2.x
@@ -45,14 +45,14 @@ router.js
 	});
 ```
 
-```
+```html
 [Vue Component].vue
 
 	<router-link active-class="active" to="/login">Login</router-link>    // 点击触发路由切换，active-class绑定触发当前路由时，展示的class样式
 	<router-view></router-view>    // 路由对应组件页面呈现的位置
 ```
 
-```
+```html
 LoginPage.vue
 
 	<router-link active-class="active" to="/login/user">Login</router-link>
@@ -64,7 +64,7 @@ LoginPage.vue
 ---
 
 ##### 路由传参和命名路由
-```
+```js
 router.js
 
 	......
@@ -111,7 +111,7 @@ router.js
 	......
 ```
 
-```
+```html
 HomePage.vue
 
 // query方式传递参数
@@ -150,7 +150,7 @@ HomePage.vue
 	}">Home</router-link>   // params方式传参对象写法
 ```
 
-```
+```html
 Detail.vue
 	// 接收参数
 	
@@ -168,7 +168,7 @@ Detail.vue
 	</script>
 ```
 
-```
+```html
 [Vue Component].vue
 
 	<router-link replace active-class="active" to="/login">Login</router-link>    // replace替换当前记录的路由
@@ -177,7 +177,7 @@ Detail.vue
 ---
 
 ##### 编程式路由导航
-```
+```html
 [Vue Component].vue
 
 	<script>
@@ -203,7 +203,7 @@ Detail.vue
 ---
 
 ##### 缓存路由组件
-```
+```html
 [Vue Component].vue
 
 	// 一般情况下切换路由会销毁当前路由组件，其中的数据会被清空
@@ -233,7 +233,7 @@ Detail.vue
 ---
 
 ##### 路由组件中两(+1)个新生命周期钩子
-```
+```html
 [Vue Component].vue
 
 	<script>
@@ -257,7 +257,7 @@ Detail.vue
 ---
 
 ##### 路由守卫：对路由进行权限控制
-```
+```js
 router.js
 
 	import VueRouter from 'vue-router';
@@ -314,7 +314,7 @@ router.js
 ```
 
 **组件内路由守卫**
-```
+```html
 [Vue Component].vue
 
 	<script>
@@ -341,8 +341,8 @@ router.js
 hash工作模式：`https://localhost/#/...`哈希/`hash`(`#`)后的路径不会作为整体的一部分发送给服务器，兼容性好；
 history工作模式：路径中不会出现哈希值(`#`)，同时也不会将路径中不必要的部分发送给服务器，但后端部署上线时需配置才能实现，兼容性略差；
 配置：
-```
-export default new VueRouter({    Vue 2.x
+```js
+export default new VueRouter({    // Vue 2.x
   mode: 'history'/'hash',
   base: process.env.BASE_URL,
   routes

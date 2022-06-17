@@ -29,18 +29,20 @@
 
 	......
 
-	data: {
-		list: [
-			{id: 1, title: 'title_1'},
-			{id: 2, title: 'title_2'},
-			{id: 3, title: 'title_3'},
-		],
-		obj: {
-			id: 1,
-			title: 'obj_1',
-			code: 'obj_code_1'
-		},
-		string: 'string_title'
+	data() {
+		return {
+			list: [
+				{id: 1, title: 'title_1'},
+				{id: 2, title: 'title_2'},
+				{id: 3, title: 'title_3'},
+			],
+			obj: {
+				id: 1,
+				title: 'obj_1',
+				code: 'obj_code_1'
+			},
+			string: 'string_title'
+		}
 	}
 
 	......

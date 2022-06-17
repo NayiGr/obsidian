@@ -41,8 +41,10 @@
 [Vue Component].vue
 
 	......
-	data: {
-		[data value]: true,
+	data() {
+		return {
+			[data value]: true
+		}
 	},
 	computed: {
 		[computedHandle]() {}
@@ -80,10 +82,12 @@
 [Vue Component].vue
 
 	......
-	data: {
-		obj: {
-			value: 0
-		},
+	data() {
+		return {
+			obj: {
+				value: 0
+			}
+		}
 	}
 	watch: {
 		'obj.value': {    // 监视多级结构中单个属性的变化
@@ -107,10 +111,12 @@
 [Vue Component].vue
 
 	......
-	data: {
-		[value_1]: 1,
-		[value_2]: 2,
-		[result_value]: 0,    // watch中使用
+	data() {
+		return {
+			[value_1]: 1,
+			[value_2]: 2,
+			[result_value]: 0,    // watch中使用
+		}
 	},
 	computed: {
 		[result_value]() {
@@ -133,10 +139,12 @@
 [Vue Component].vue
 
 	......
-	data: {
-		[value_1]: 1,
-		[value_2]: 2,
-		[result_value]: 0,    // watch中使用
+	data() {
+		return {
+			[value_1]: 1,
+			[value_2]: 2,
+			[result_value]: 0,    // watch中使用
+		}
 	},
 	computed: {
 		[result_value]() {

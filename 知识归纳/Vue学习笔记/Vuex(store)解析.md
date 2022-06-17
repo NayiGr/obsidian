@@ -1,6 +1,6 @@
 #### Vuex中state、mutations、actions功能使用
 
-```
+```js
 store.js
 
 	const actions = {    // 响应组件中的动作，处理业务逻辑，如发送请求，dispatch('[function name]', value)
@@ -47,7 +47,7 @@ store.js
 	});
 ```
 
-```
+```js
 [Vue Component].vue
 
 	methods: {
@@ -61,7 +61,7 @@ store.js
 ```
 
 ##### 简化调用state：
-```
+```js
 [Vue Component].vue
 
 	import {mapState} from 'vuex';
@@ -87,7 +87,7 @@ store.js
 ```
 
 ##### 简化调用getters：
-```
+```js
 [Vue Component].vue
 
 	import {mapGetters} from 'vuex';
@@ -109,7 +109,7 @@ store.js
 ```
 
 ##### 简化调用mutations：
-```
+```js
 [Vue Component].vue
 
 	import {mapMutations} from 'vuex';
@@ -139,7 +139,7 @@ store.js
 ```
 
 ##### 简化调用actions：
-```
+```js
 [Vue Component].vue
 
 	import {mapActions} from 'vuex';

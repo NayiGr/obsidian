@@ -1,6 +1,6 @@
 ##### Vue2响应式原理
 Vue2依靠`Object.defineProperty()`实现响应监听和数据拦截，但`Object.defineProperty()`无法捕获新增和删除数据，需要通过使用`Vue.set()`添加新属性，`vm.$delete()/this.$delete()`删除属性；
-```
+```js
 let object = {
 	name: 'XXX',
 	type: 'YYY'
@@ -24,7 +24,7 @@ Object.defineProperty(obj, 'name', {    // 每个属性都需要定义一个Obje
 
 ##### Vue3响应式原理
 Vue3依靠`Proxy()`实现响应监听和数据拦截；
-```
+```js
 let object = {
 	name: 'XXX',
 	type: 'YYY'
@@ -49,7 +49,7 @@ const proxy = new Proxy(object, {    // 单个Proxy可满足一维对象进行�
 对对象的keys进行遍历并使用`Object.defineProperty()`，监视data中属性的变化。
 
 仿Vue实现响应式检测对象的简化功能：
-```
+```js
 	let data = {value: 0, objects: {proper: ''}};
 
 	const _data = new Data(data);

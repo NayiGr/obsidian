@@ -1,5 +1,5 @@
 ##### 各种数据类型的遍历渲染
-```
+```html
 [Vue Component].vue
 	......
 	// 遍历数组
@@ -25,8 +25,9 @@
 		<li v-for="(number, index) in 10" :key="index">{{number}}</li>    // number从1到10
 	</ul>
 	......
+```
 
-
+```js
 	......
 
 	data() {

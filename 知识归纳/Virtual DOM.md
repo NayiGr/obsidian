@@ -1,23 +1,25 @@
 `Virtual DOM`是一个JS对象，且最少包含`tag`、`props`和`children`三个属性。不同框架对这三个属性命名有所差异，但表达意思一致。分别指标签名(`tag`)、属性(`props`)和子元素对象(`children`)。
 
 eg:
-```
+```js
 {
-    tag: 'div',
-    props: {},
-    children: [
-        'Hello World',
-        {
-          tag: 'span',
-          props: {
-            id: 'spanId-1',
-            class: 'spanClass-1'
-          },
-          children: ['Virtual DOM']
-        }
-      ]
-    }
+	 tag: 'div',
+	 props: {},
+	 children: [
+		'Hello World',
+		 {
+			 tag: 'span',
+			 props: {
+				 id: 'spanId-1',
+				 class: 'spanClass-1'
+			 },
+			 children: ['Virtual DOM']
+		 }
+	 ]
+ }
+```
 
+```html
     <div>
       Hello World
       <span id="spanId-1" class="spanClass-1">
@@ -25,7 +27,6 @@ eg:
       </span>
     </div>
 ```
-
 
 `Virtural DOM`和`DOM`对象一一对应，上面的`Virtural DOM`由下面的`HTML`生成。换而言之，一个`DOM`对象，生成一个由`tag`、`props`和`children`三个属性组成的`Virtural DOM`，剔除了其他复杂的内容。
 

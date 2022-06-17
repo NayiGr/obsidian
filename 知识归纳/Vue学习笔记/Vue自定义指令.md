@@ -1,8 +1,8 @@
 自定义函数在**指令与元素成功绑定**时，和**指令所在的模板被重新解析**时调用
-```js
+```html
 [Vue Component].vue
 
-	<span v-['directive name']=></span>
+	<span v-['directive name']='value'></span>
 	
 	<script type="text/javascript">
 		export default {

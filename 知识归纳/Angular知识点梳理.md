@@ -5,25 +5,25 @@
 
 ###### 父传子：
 子组件：
-```
+```js
 	@Input() param: any;
 	ngOnChange() {}	// 当传递的值发生改变，会执行在此生命周期函数，可在里面执行当值改变时需要执行的方法；
 ```
 
 父组件：
-```
+```html
 	<page [param]="current"></page>
 	this.current = 'others';	// current发生改变时会传递给param；
 ```
 
 ###### 子传父：
 子组件：
-```
+```js
 	@Output() param: EventEmitter<any> = new EventEmitter<any>();
 	this.param.emit(true);	// 触发传值
 ```
 父组件：
-```
+```html
 	<page (param)='getParam($event)'></page>	// 传递过来的值作为$event传进方法中并执行此方法
 	getParam(event) {}
 ```

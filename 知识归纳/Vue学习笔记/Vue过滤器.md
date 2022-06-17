@@ -25,6 +25,6 @@
 ```
 
 ##### 全局过滤器
-```
+```js
 	Vue.filter('dateFormat', function(value){});    // 必须在new Vue()实例前，设置好过滤器
 ```

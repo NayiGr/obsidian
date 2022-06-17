@@ -10,13 +10,15 @@
 
 ##### computed
 计算属性：将原有的属性（`data`中的数据），进行加工计算所生成的新属性。
-```
+```html
 [Vue Component].vue
 
 	......
 	<div>{{[computedHandle]}}</div>    // 是属性而非方法函数，不可加()
 	......
+```
 
+```js
 	......
 	computed: {
 		// 完整写法
@@ -37,7 +39,7 @@
 ---
 
 ##### watch
-```
+```js
 [Vue Component].vue
 
 	......
@@ -78,7 +80,7 @@
 	vm.$watch('[data value]', function (newValue, oldValue) {});
 ```
 **深度监视**
-```
+```js
 [Vue Component].vue
 
 	......
@@ -107,7 +109,7 @@
 
 ##### watch和computed区别
 一般对于新变量依赖已有变量，随已有变量改变而改变情况下使用，`watch`比`computed`更繁琐
-```
+```js
 [Vue Component].vue
 
 	......
@@ -135,7 +137,7 @@
 ```
 
 但当需要进行异步操作时，只能使用`watch`，而`computed`计算属性无法开启异步任务。
-```
+```js
 [Vue Component].vue
 
 	......

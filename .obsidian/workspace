@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "知识归纳/Vue学习笔记/Vue自定义指令.md",
+            "file": "知识归纳/Vue学习笔记/Vue生命周期.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识归纳/Vue学习笔记/Vue自定义指令.md",
+                "file": "知识归纳/Vue学习笔记/Vue生命周期.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "6b361acd8b135f4e",
   "lastOpenFiles": [
+    "知识归纳/Vue学习笔记/Vue生命周期.md",
     "知识归纳/Vue学习笔记/Vue自定义指令.md",
     "知识归纳/Vue学习笔记/Vue组件模块对象.md",
     "知识归纳/Vue学习笔记/Vue列表渲染.md",
@@ -97,7 +98,6 @@
     "知识归纳/Vue学习笔记/Vuex(store)解析.md",
     "知识归纳/Flutter知识点梳理.md",
     "知识归纳/Flutter组件功能应用.md",
-    "知识归纳/git常用命令.md",
-    "知识归纳/JavaScript知识点记录.md"
+    "知识归纳/git常用命令.md"
   ]
 }

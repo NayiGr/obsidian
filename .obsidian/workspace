@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "知识归纳/Android打包签名.md",
+            "file": "知识归纳/Vue学习笔记/Vue生命周期.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识归纳/Android打包签名.md",
+                "file": "知识归纳/Vue学习笔记/Vue生命周期.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,8 +89,8 @@
   },
   "active": "6b361acd8b135f4e",
   "lastOpenFiles": [
-    "知识归纳/Android打包签名.md",
     "知识归纳/Vue学习笔记/Vue生命周期.md",
+    "知识归纳/Android打包签名.md",
     "Pasted.md",
     "image/config_generate_singed.png",
     "知识归纳/Vue学习笔记/Vue响应数据原理.md",

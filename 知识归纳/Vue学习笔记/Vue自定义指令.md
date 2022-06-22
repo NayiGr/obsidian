@@ -1,4 +1,4 @@
-自定义函数在**指令与元素成功绑定**时，和**指令所在的模板被重新解析**时调用
+自定义函数在**指令与元素成功绑定（即初始化，但在页面渲染前）**时，和**指令所在的模板被重新解析（即任意数据被修改导致模板改变时）**时调用
 ```html
 [Vue Component].vue
 
@@ -18,9 +18,11 @@
 					element.innerText = binding.value * 10;    // binding.value指所绑定的值
 				},
 				
-				// 完整
+				// 完整写法
 				['directive name']: {
-				
+					bind(element, binding) {},    // 指令与元素成功绑定时（初始化）
+					inserted(element, binding) {},    // 指令所在元素被插入DOM页面时
+					update(element, binding) {},    // 指令所在的模板被重新解析（任意数据被修改）
 				}
 			}
 		}

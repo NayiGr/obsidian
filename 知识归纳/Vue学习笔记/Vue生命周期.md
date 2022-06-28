@@ -1,5 +1,7 @@
 ![[lifecycle.png]]
 
+el绑定组件，若没有el，须执行vm.$mount(['root name'])，否则将不往下执行
+
 常用的生命周期钩子
 - `mounted`发送`ajax`请求、启动定时器、绑定自定义事件、订阅消息等初始化操作
 - `beforeDestroy`清除定时器、解绑自定义事件、取消订阅消息等收尾工作

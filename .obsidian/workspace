@@ -90,14 +90,14 @@
   "active": "6b361acd8b135f4e",
   "lastOpenFiles": [
     "知识归纳/Vue学习笔记/Vue生命周期.md",
+    "知识归纳/Vue学习笔记/Vue自定义指令.md",
+    "知识归纳/Vue学习笔记/Vue Router归纳.md",
+    "知识归纳/Vue学习笔记/Vue响应数据原理.md",
+    "知识归纳/Vue学习笔记/Vue过滤器.md",
     "知识归纳/Android打包签名.md",
     "Pasted.md",
     "image/config_generate_singed.png",
-    "知识归纳/Vue学习笔记/Vue响应数据原理.md",
-    "知识归纳/Vue学习笔记/Vue自定义指令.md",
     "知识归纳/Vue学习笔记/Vue组件模块对象.md",
-    "知识归纳/Vue学习笔记/Vue列表渲染.md",
-    "知识归纳/Vue学习笔记/Vue过滤器.md",
-    "知识归纳/Vue学习笔记/Vuex(store)解析.md"
+    "知识归纳/Vue学习笔记/Vue列表渲染.md"
   ]
 }

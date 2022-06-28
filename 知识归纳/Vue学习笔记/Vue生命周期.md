@@ -1,6 +1,6 @@
 ![[lifecycle.png]]
 
-el绑定组件，若没有el，须执行vm.$mount(['root name'])，否则将不往下执行
+==注==：`el`绑定组件，若没有`el`，须执行`vm.$mount(['root name'])`，否则将不继续往下执行。
 
 常用的生命周期钩子
 - `mounted`发送`ajax`请求、启动定时器、绑定自定义事件、订阅消息等初始化操作

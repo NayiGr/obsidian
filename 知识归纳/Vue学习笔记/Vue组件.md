@@ -1,0 +1,5 @@
+```js
+[Vue Component].vue
+
+
+```

@@ -8,7 +8,7 @@
 	
 	<script type="text/javascript">
 		export default {
-			name: '(Component Name)',
+			name: '[ComponentName]',
 			data() {
 				return {
 					value: 1

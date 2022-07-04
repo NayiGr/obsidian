@@ -23,7 +23,7 @@
 		...
 
 		// 简单声明接收
-		props: ['title', 'value'],
+		props: ['title', 'value'],    // 不能修改接收的变量
 
 		// 类型限制接收
 		props: {
@@ -31,7 +31,7 @@
 			value: Number
 		},
 
-		// 配置接收
+		// 配置限制接收
 		props: {
 			title: {
 				type: String,

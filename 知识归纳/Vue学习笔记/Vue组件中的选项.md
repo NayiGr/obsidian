@@ -315,18 +315,59 @@
 ---
 
 #### 混入 (mixin)
-多个组件共享一个配置
+多个组件共享一个配置（复用配置），组件中所有的配置项都能在`mixin`中配置。`mixin`中的配置项和其中的配置会与组件整合，但是若`mixin`和组件的配置项或其中的配置发生冲突，以该组件为主。而生命周期例外，生命周期不以水为主
 
 ```js
 mixin.js
 
-export const mixin = {
+export const mixinMethods = {
+	methods: {
+		handle() {
+			console.log(1);
+		}
+	}
+};
 
+export const mixinData = {
+	data() {
+		return {
+			value: 1,
+			title: 'mixin',
+		}
+	}
 };
 ```
 
 ```html
-[Vue Component].vue
+[Vue Component_1].vue
 
+	<button @click="handle"></button>
+	<span>{{value}} - {{title}} - {{info}}<span>    <!-- 3 - mixin - component info -->
 
+	<script>
+		import {mixinMethods, mixinData} from 'mixin.js'
+		...
+		data() {    // 与mixin中的data整合，若变量名冲突时，以此组件定义变量为主
+			return {
+				info: 'component info',
+				value: 3
+			}
+		}
+		mixins: [mixinMethods, mixinData]
+		...
+	</script>
+```
+
+```html
+[Vue Component_2].vue
+
+	<div @click="handle"></div>
+	<span>{{value}} - {{title}}<span>    <!-- 1 - mixin -->
+
+	<script>
+		import {mixinMethods, mixinData} from 'mixin.js'
+		...
+		mixins: [mixinMethods, mixinData]
+		...
+	</script>
 ```

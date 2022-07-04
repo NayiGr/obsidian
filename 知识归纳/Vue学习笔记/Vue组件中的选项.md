@@ -315,3 +315,18 @@
 ---
 
 #### 混入 (mixin)
+多个组件共享一个配置
+
+```js
+mixin.js
+
+export const mixin = {
+
+};
+```
+
+```html
+[Vue Component].vue
+
+
+```

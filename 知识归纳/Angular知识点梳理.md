@@ -13,7 +13,7 @@
 父组件：
 ```html
 	<page [param]="current"></page>
-	this.current = 'others';	// current发生改变时会传递给param；
+	this.current = 'others';	<!-- current发生改变时会传递给param -->
 ```
 
 ###### 子传父：
@@ -24,7 +24,7 @@
 ```
 父组件：
 ```html
-	<page (param)='getParam($event)'></page>	// 传递过来的值作为$event传进方法中并执行此方法
+	<page (param)='getParam($event)'></page>	<!-- 传递过来的值作为$event传进方法中并执行此方法 -->
 	getParam(event) {}
 ```
 

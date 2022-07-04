@@ -48,8 +48,10 @@ router.js
 ```html
 [Vue Component].vue
 
-	<router-link active-class="active" to="/login">Login</router-link>    // 点击触发路由切换，active-class绑定触发当前路由时，展示的class样式
-	<router-view></router-view>    // 路由对应组件页面呈现的位置
+	<!-- 点击触发路由切换，active-class绑定触发当前路由时，展示的class样式 -->
+	<router-link active-class="active" to="/login">Login</router-link>
+	<!-- 路由对应组件页面呈现的位置 -->
+	<router-view></router-view>
 ```
 
 ```html
@@ -58,7 +60,7 @@ LoginPage.vue
 	<router-link active-class="active" to="/login/user">Login</router-link>
 	<router-link active-class="active" to="/login/setting">Login</router-link>
 
-	<router-view></router-view>    // 路由对应组件页面呈现的位置
+	<router-view></router-view>
 ```
 
 ---
@@ -114,22 +116,25 @@ router.js
 ```html
 HomePage.vue
 
-// query方式传递参数
-	
-	<router-link :to="`/home/detail?id=${detail.id}&title=${detail.title}`">Home</router-link>   // query方式传参字符串写法
-	
+	<!-- query方式传递参数 -->
+
+	<!-- query方式传参字符串写法 -->
+	<router-link :to="`/home/detail?id=${detail.id}&title=${detail.title}`">Home</router-link>
+
+	<!-- query方式传参对象写法 -->
 	<router-link :to="{
 		path: '/home/detail',
 		query: {
 			id: detail.id,
 			title: detail.title
 		}
-	}">Home</router-link>   // query方式传参对象写法
+	}">Home</router-link>
 
-	// 等同
+	<!-- 等同 -->
 
+	<!-- path替换为name，省去过长路径，同时使用了命名路由就无法使用字符串写法 -->
 	<router-link :to="{
-		name: 'detailRouter',   // 替换path，省去过长路径，同时使用了命名路由就无法使用字符串写法
+		name: 'detailRouter',
 		query: {
 			id: detail.id,
 			title: detail.title
@@ -137,22 +142,24 @@ HomePage.vue
 	}">Home</router-link>
 
 
-// params方式传递参数，需配置路由
+	<!-- params方式传递参数，需配置路由 -->
 
-	<router-link :to="`/home/detail/${detail.id}/${detail.title}`">Home</router-link>   // params方式传参字符串写法
+	<!-- params方式传参字符串写法 -->
+	<router-link :to="`/home/detail/${detail.id}/${detail.title}`">Home</router-link>
 
+	<!-- params方式传参对象写法，只能使用命名路由 -->
 	<router-link :to="{
-		name: 'detailRouter',    // params方式传参只能使用命名路由
+		name: 'detailRouter',
 		params: {
 			id: detail.id,
 			title: detail.title
 		}
-	}">Home</router-link>   // params方式传参对象写法
+	}">Home</router-link>
 ```
 
 ```html
 Detail.vue
-	// 接收参数
+	<!-- 接收参数 -->
 	
 	<script>
 		......
@@ -171,7 +178,8 @@ Detail.vue
 ```html
 [Vue Component].vue
 
-	<router-link replace active-class="active" to="/login">Login</router-link>    // replace替换当前记录的路由
+	<!-- replace替换当前记录的路由 -->
+	<router-link replace active-class="active" to="/login">Login</router-link>
 ```
 
 ---
@@ -206,19 +214,19 @@ Detail.vue
 ```html
 [Vue Component].vue
 
-	// 一般情况下切换路由会销毁当前路由组件，其中的数据会被清空
+	<!-- 一般情况下切换路由会销毁当前路由组件，其中的数据会被清空 -->
 	<router-view></router-view>
 
-	// 将路由展示区置于<keep-alive>中，缓存其中的展示区即路由组件
+	<!-- 将路由展示区置于<keep-alive>中，缓存其中的展示区即路由组件 -->
 	<keep-alive>
 		<router-view></router-view>
 	</keep-alive>
 
-	// include指定需要缓存的路由组件的组件名，除此之外的路由组件不进行缓存
+	<!-- include指定需要缓存的路由组件的组件名，除此之外的路由组件不进行缓存 -->
 	<keep-alive include="(Component Name)">
 		<router-view></router-view>
 	</keep-alive>
-	<keep-alive :include="['(Component Name)', ...]">    // 数组形式
+	<keep-alive :include="['(Component Name)', ...]">    <!-- 数组形式 -->
 		<router-view></router-view>
 	</keep-alive>
 

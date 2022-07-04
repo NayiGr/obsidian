@@ -24,12 +24,12 @@ Exception in thread "main" javax.net.ssl.SSLException: Connection has been shutd
 一、配置gradle，可能出现卡在`Running Gradle task 'assembleDebug'`，可手动下载并在项目`/gradle/wrapper/gradle-wrapper.properties`中配置引用本地路径：`distributionUrl=file\:///D:/**/**/**/gradle-6.7-all.zip`（本地gradle路径）
 
 二、在`android/build.gradle`目录下，将`buildscript`和`allprojects`中的`repositories`调用的方法
-```
+```js
      google()
      jcenter()
 ```
 替换为：
-```
+```js
 	maven { url 'https://maven.aliyun.com/repository/google' }
     maven { url 'https://maven.aliyun.com/repository/jcenter' }
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }

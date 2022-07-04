@@ -19,7 +19,7 @@ cordova plugin add cordova-android-support-gradle-release --variable ANDROID_SUP
 
 在 /platform/android 目录下找到`build.gradle`文件，打开并在`def promptForReleaseKeyPassword() {...}`前加入以下内容：
 
-```
+```js
 configurations.all {
   resolutionStrategy {
       force 'com.android.support:support-v4:27.1.0'

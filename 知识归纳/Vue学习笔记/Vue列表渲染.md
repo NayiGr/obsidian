@@ -2,7 +2,7 @@
 ```html
 [Vue Component].vue
 	......
-	// 遍历数组
+	<!-- 遍历数组 -->
 	<ul>
 		<li v-for="item in list" :key="item.id">{{item.title}}</li>
 	</ul>
@@ -20,9 +20,9 @@
 		<li v-for="(char, index) in string" :key="index">{{char}}</li>
 	</ul>
 
-	// 遍历指定次数
+	<!-- 遍历指定次数 -->
 	<ul>
-		<li v-for="(number, index) in 10" :key="index">{{number}}</li>    // number从1到10
+		<li v-for="(number, index) in 10" :key="index">{{number}}</li>    <!-- number从1到10 -->
 	</ul>
 	......
 ```

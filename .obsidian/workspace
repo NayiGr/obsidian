@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "6b361acd8b135f4e",
+        "id": "8af7d91b6c8c3b54",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "知识归纳/Vue学习笔记/Vue组件其它配置项.md",
+            "file": "知识归纳/Vue学习笔记/Vue组件和组件交互.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识归纳/Vue学习笔记/Vue组件其它配置项.md",
+                "file": "知识归纳/Vue学习笔记/Vue组件和组件交互.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "6b361acd8b135f4e",
+  "active": "8af7d91b6c8c3b54",
   "lastOpenFiles": [
-    "知识归纳/Vue学习笔记/Vue组件其它配置项.md",
-    "知识归纳/Vue学习笔记/Vue组件中的选项.md",
-    "知识归纳/Vue学习笔记/Vue过滤器.md",
-    "知识归纳/Vue学习笔记/Vue自定义指令.md",
-    "知识归纳/Vue学习笔记/Vue响应数据原理.md",
-    "知识归纳/Vue学习笔记/Vue知识点梳理.md",
-    "知识归纳/Vue学习笔记/Vue列表渲染.md",
     "知识归纳/Vue学习笔记/Vue组件和组件交互.md",
-    "知识归纳/Vue学习笔记/Vue ref属性.md",
-    "知识归纳/Vue学习笔记/Vue 配置项props.md"
+    "知识归纳/Vue学习笔记/Vue组件中的选项.md",
+    "错误处理/AgmMaps出现的'google'错误.md",
+    "错误处理/Android Studio模拟器报错.md",
+    "错误处理/Android Studio配置gradle报错.md",
+    "错误处理/Cordova插件调用媒体库报错.md",
+    "错误处理/npm install报错.md",
+    "错误处理/Flutter编译错误.md",
+    "错误处理/Cordova打包Android报错.md",
+    "知识归纳/Virtual DOM.md"
   ]
 }

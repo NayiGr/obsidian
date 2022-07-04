@@ -265,7 +265,7 @@
 
 ---
 
-#### 配置项props
+#### props
 ```html
 [Vue Component].vue (Parent)
 
@@ -311,3 +311,7 @@
 		...
 	</script>
 ```
+
+---
+
+#### 混入 (mixin)

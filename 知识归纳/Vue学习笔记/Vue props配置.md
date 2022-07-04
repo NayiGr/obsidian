@@ -31,7 +31,7 @@
 			value: Number
 		},
 
-		// 
+		// 配置接收
 		props: {
 			title: {
 				type: String,

@@ -315,7 +315,7 @@
 ---
 
 #### 混入 (mixin)
-多个组件共享一个配置（复用配置），组件中所有的配置项都能在`mixin`中配置。`mixin`中的配置项和其中的配置会与组件整合，但是若`mixin`和组件的配置项或其中的配置发生冲突，以该组件为主。而生命周期例外，生命周期不以水为主
+多个组件共享一个配置（复用配置），组件中所有的配置项都能在`mixin`中配置。`mixin`中的配置项和其中的配置会与组件整合，但是若`mixin`和组件的配置项或其中的配置发生冲突，以该组件为主。而生命周期例外，生命周期不以谁为主，将两者都执行，其中`mixin`的生命周期先于组件生命周期执行。
 
 ```js
 mixin.js
@@ -338,6 +338,7 @@ export const mixinData = {
 };
 ```
 
+##### 局部混入
 ```html
 [Vue Component_1].vue
 
@@ -370,4 +371,15 @@ export const mixinData = {
 		mixins: [mixinMethods, mixinData]
 		...
 	</script>
+```
+
+##### 全局混入
+无论是否需要使用，所有组件都会挂载，都会得到`mixin`中的配置项和其中的配置。
+```js
+main.js
+
+	import {mixinMethods, mixinData} from 'mixin.js'
+	
+	Vue.mixin(mixinMethods);
+	Vue.mixin(mixinData);
 ```

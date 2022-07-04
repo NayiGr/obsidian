@@ -1,3 +1,11 @@
+##### Vue的MVVM模型
+M：模型（`Model`）：对应`data`中的数据
+V：视图（`View`）：模板`template`
+VM：视图模型（`ViewModel`）：`Vue`实例对象`new Vue()`
+数据`data`经过`new Vue()`实例，显示在模板`template`上，模板`template`上数据`data`更改通过`new Vue()`实例映射回数据`data`。
+
+---
+
 ##### Img动态显示图片
 Vue和ElementUI，链接本地图片地址需要包裹在`require()`中.
 
@@ -49,9 +57,3 @@ return {
  2. 事件冒泡时触发了父元素的事件，但其`event.target`还是原来真正触发事件的子元素，而非冒泡导致事件触发的父元素。
 
 ---
-
-##### Vue的MVVM模型
-M：模型（`Model`）：对应`data`中的数据
-V：视图（`View`）：模板`template`
-VM：视图模型（`ViewModel`）：`Vue`实例对象`new Vue()`
-数据`data`经过`new Vue()`实例，显示在模板`template`上，模板`template`上数据`data`更改通过`new Vue()`实例映射回数据`data`。

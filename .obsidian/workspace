@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "知识归纳/Vue学习笔记/Vue ref属性.md",
+            "file": "知识归纳/Vue学习笔记/Vue props配置.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识归纳/Vue学习笔记/Vue ref属性.md",
+                "file": "知识归纳/Vue学习笔记/Vue props配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "6b361acd8b135f4e",
   "lastOpenFiles": [
+    "知识归纳/Vue学习笔记/Vue props配置.md",
     "知识归纳/Vue学习笔记/Vue ref属性.md",
     "知识归纳/Vue学习笔记/Vue列表渲染.md",
     "知识归纳/Vue学习笔记/Vue的MVVM模型.md",
@@ -97,7 +98,6 @@
     "知识归纳/Vue学习笔记/Vue自定义指令.md",
     "知识归纳/Vue学习笔记/Vue组件中的模块对象.md",
     "知识归纳/Vue学习笔记/Vue生命周期.md",
-    "知识归纳/Vue学习笔记/Vue响应数据原理.md",
-    "知识归纳/Vue学习笔记/Vue过滤器.md"
+    "知识归纳/Vue学习笔记/Vue响应数据原理.md"
   ]
 }

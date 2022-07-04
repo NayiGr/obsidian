@@ -1,3 +1,38 @@
+#### 过滤器
+##### 局部过滤器
+```html
+[Vue Component].vue
+
+	<span>{{time | dateFormat(toUTCString) | stringSlice}}</span>    // 过滤器按从左到右将结果依次执行
+	<span :[value]="time | dateFormat(toUTCString) | stringSlice"></span>    // 过滤器只能在插值语法和(v-bind:属性)中使用
+
+	<script type="text/javascript">
+		export default {
+			name: '(Component Name)',
+			filters: {
+			    // time作为默认参数传入，若有其他参数则在其之后，再将返回值替换time所在的整个插值语法（{{time | dateFormat}}）
+				dateFormat(value, type) {
+					if (type == toUTCString) {
+						return value.toUTCString();
+					}
+					return value.toISOString();
+				},
+				stringSlice(value) {
+					return value.slice(0, 4);
+				}
+			}
+		}
+	</script>
+```
+
+##### 全局过滤器
+```js
+	Vue.filter('dateFormat', function(value){});    // 必须在new Vue()实例前，设置好过滤器
+```
+
+---
+
+#### 自定义指令
 自定义函数在**指令与元素成功绑定（即初始化，但在页面渲染前）**时，和**指令所在的模板被重新解析（即任意数据被修改导致模板改变时）**时调用
 
 ##### 局部指令

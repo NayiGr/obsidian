@@ -382,4 +382,6 @@ main.js
 	
 	Vue.mixin(mixinMethods);
 	Vue.mixin(mixinData);
+
+	new Vue({...});
 ```

@@ -3,8 +3,10 @@
 plugin.js
 
 	export default {
-		install(Vue) {    // Vue构造函数
-			
+		install(Vue) {    // Vue：Vue的构造函数
+			Vue.directive("['directive name']", function(value){}); 
+
+			Vue.filter("['filter name']", function(value){});
 		}
 	}
 

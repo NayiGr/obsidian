@@ -9,6 +9,18 @@
         "state": {
           "type": "markdown",
           "state": {
+            "file": "知识归纳/Vue学习笔记/Vue组件中的选项.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "2c894b02f9d23256",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
             "file": "知识归纳/Vue学习笔记/Vue插件(plugin).md",
             "mode": "source",
             "source": false
@@ -87,15 +99,15 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8af7d91b6c8c3b54",
+  "active": "2c894b02f9d23256",
   "lastOpenFiles": [
     "知识归纳/Vue学习笔记/Vue插件(plugin).md",
     "知识归纳/Vue学习笔记/Vue组件中的选项.md",
+    "知识归纳/Vue学习笔记/Vue组件和组件属性.md",
     "image/finish_generate_signed.png",
     "image/generate_signed_app.png",
     "image/lifecycle.png",
     "知识归纳/Vue学习笔记/Vue知识点梳理.md",
-    "知识归纳/Vue学习笔记/Vue组件和组件属性.md",
     "知识归纳/DOM的重绘和重排.md",
     "知识归纳/ES6+新增API.md",
     "知识归纳/Flutter打包签名.md"

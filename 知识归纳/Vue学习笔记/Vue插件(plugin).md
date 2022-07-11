@@ -3,7 +3,7 @@
 plugin.js
 
 	export default {
-		install(Vue) {    // Vue：Vue的构造函数
+		install(Vue, a, b, c, ...) {    // Vue：Vue的构造函数 // 输出Vue的构造函数, 1, 2, 3, ...
 
 			// 定义全局指令
 			Vue.directive("['directive name']", function(value){}); 
@@ -14,12 +14,10 @@ plugin.js
 			// 定义全局混入
 			Vue.mixin(['mixin module']);
 			
-			// Vue原型直接添加其他数据
+			// Vue原型直接添加其他自定义数据
 			Vue.prototype.['prototype name'] = ['anything'];
 		}
 	}
-
-
 ```
 
 ```js
@@ -28,6 +26,7 @@ main.js
 	import plugin from 'plugin.js'
 
 	Vue.use(plugin);    // 使用插件
+	Vue.use(plugin , 1, 2, 3, ...);
 
 	new Vue({...});
 ```

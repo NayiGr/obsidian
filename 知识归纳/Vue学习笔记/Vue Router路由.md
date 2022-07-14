@@ -321,7 +321,7 @@ router.js
 
 ```
 
-**组件内路由守卫**
+###### 组件内路由守卫
 ```html
 [Vue Component].vue
 

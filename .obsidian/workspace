@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "知识归纳/FFmpeg常用命令.md",
+            "file": "知识归纳/Vue学习笔记/插件(plugin).md",
             "mode": "preview",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识归纳/FFmpeg常用命令.md",
+                "file": "知识归纳/Vue学习笔记/插件(plugin).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "2c894b02f9d23256",
   "lastOpenFiles": [
-    "知识归纳/FFmpeg常用命令.md",
-    "组件中的选项.md",
-    "未命名.md",
-    "知识归纳/Vue学习笔记/组件间通信.md",
-    "知识归纳/Vue学习笔记/组件详解(属性，配置项).md",
+    "知识归纳/Vue学习笔记/插件(plugin).md",
+    "知识归纳/Vue学习笔记/基础知识点梳理.md",
     "知识归纳/Vue学习笔记/生命周期.md",
-    "知识归纳/Vue学习笔记/响应数据原理.md",
     "知识归纳/Vue学习笔记/Vuex(store)解析.md",
-    "知识归纳/Vue学习笔记/Vue Router路由.md",
-    "知识归纳/Angular知识梳理.md"
+    "知识归纳/Vue学习笔记/组件详解(属性，配置项).md",
+    "知识归纳/Vue学习笔记/响应数据原理.md",
+    "知识归纳/FFmpeg常用命令.md",
+    "知识归纳/ES6+新增API.md",
+    "知识归纳/DOM的重绘和重排.md",
+    "知识归纳/git常用命令.md"
   ]
 }

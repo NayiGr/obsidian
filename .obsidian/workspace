@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "知识归纳/Vue学习笔记/插槽.md",
+            "file": "知识归纳/Vue学习笔记/插槽（组件间通信）.md",
             "mode": "source",
             "source": false
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识归纳/Vue学习笔记/插槽.md",
+                "file": "知识归纳/Vue学习笔记/插槽（组件间通信）.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,7 +90,7 @@
   },
   "active": "2c894b02f9d23256",
   "lastOpenFiles": [
-    "知识归纳/Vue学习笔记/插槽.md",
+    "知识归纳/Vue学习笔记/插槽（组件间通信）.md",
     "知识归纳/Vue学习笔记/组件间通信.md",
     "知识归纳/Vue学习笔记/Vue Router路由.md",
     "知识归纳/Vue学习笔记/组件详解(标签属性，配置项).md",
